@@ -9,31 +9,29 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito &amp;
 ## Installation
 
 1. Search for “install java jdk” on google. 
-![Image](/images/google-search-install-java-jdk.png) 
-
-
+![Image](/images/google-search-install-java-jdk.png)
 
 2. Choose the first link. You should go to the oracle site.
-oracle-website-java-installation.png
+![Image](/images/oracle-website-java-installation.png)
 
 3. Select the Java Platform JDK Link.  
-java-installation-icon.png
+![Image](/images/java-installation-icon.png)
 
 4. Accept the license agreement.  
-oracle-java-license-agreement.png
+![Image](/images/oracle-java-license-agreement.png)
 
 Choose the Java Install for your Operating System.  If you are windows 64 bit operating system, choose the Windows x64 java. 
-choose-java-installation-for-your-os.png
+![Image](/images/choose-java-installation-for-your-os.png)
 
 Wait for the download to complete. Double click the file from the downloads folder.
 Java Installer would launch up. Click Continue.  
-java-installation-first-step.png
+![Image](/images/java-installation-first-step.png)
 
 Click install on the next screen 
-java-installation-second-step.png
+![Image](/images/java-installation-second-step.png)
 
 Have a coffee and wait for the installation to complete. When the installation is complete, you would see the screen below:  
-java-installation-confirmation.png
+![Image](/images/java-installation-confirmation.png)
 
 Click close. We are ready to Rock and Roll. Do a Dance.
 
@@ -44,7 +42,7 @@ If you are on Windows : Open the Command Prompt window by clicking the Start but
 If you are on Mac or other OS, launch up Terminal.
 
 Type in the command “java –version” as shown in the screen. If it does not work, go to the trouble shooting section.  
-java-version-command.png
+![Image](/images/java-version-command.png)
 
 ## Troubleshooting
 a.	Check if there are any pre-existing Java installs. Uninstall them and reinstall again.
@@ -56,13 +54,13 @@ d.	Check if you are on 32-bit OS or 64-bit OS and ensure you are making use of t
 # Eclipse
 
 Check if Java is installed properly. Type in the command “java –version” as shown in the screen. If it does not work, go to the trouble shooting section of Java or Reinstall Java. 
-java-version-command.png
+![Image](/images/java-version-command.png)
 
 Search google for “download eclipse” and choose the first result. 
-google-search-download-eclipse.png
+![Image](/images/google-search-download-eclipse.png)
 
 Choose the right Operation System. 
-eclipse-choose-installation.png
+![Image](/images/eclipse-choose-installation.png)
 
 We recommend to choose “Eclipse IDE for Java EE Developers”. Choose 32 bit or 64 bit based on your operating system. (Right-click My Computer, and then click Properties. If "x64 Edition" is listed under System, your processor is capable of running a 64-bit version of Windows.)
 
@@ -86,38 +84,38 @@ Refer to Troubleshooting section of https://wiki.eclipse.org/Eclipse/Installatio
 ### 4. Importing Java Eclipse Project
 Download the zip file & Un zip (extract the contents) the zip file.
 Check if the folder contains a .project file.  Highlighted in the image below. You can also open the folder in windows explorer and check if it contains .project & .settings & .classpath files . (On mac these files are hidden. We used the command ls –la) 
-import-java-eclipse-project-1.png
+![Image](/images/import-java-eclipse-project-1.png)
 
 Copy the folder path into clipboard. (ctrl + c)  
 Launch up Eclipse and give folder name (Other folder name) as the workspace folder. Click OK.  
-import-java-eclipse-project-2.png
+![Image](/images/import-java-eclipse-project-2.png)
 Once Eclipse Launches up Go To File -> Import -> General -> Existing Projects into Workspace. Click Next. 
-import-java-eclipse-project-3.png
+![Image](/images/import-java-eclipse-project-3.png)
 Select Root Directory as the folder we copied earlier (the folder which contained .project, .classpath and .settings files).  
 You should see a project highlighted in the Projects section.  
 If you do not see any project, you are checking a wrong folder. Make sure you browse and select the correct folder containing the .project and the .classpath files.
 Click Finish.
 Your project would be imported and You are ready to work on it.  
-import-java-eclipse-project-4.png
+![Image](/images/import-java-eclipse-project-4.png)
 Good Luck and Have a Safe Party
 
 ### 5. Importing a Maven Project into Eclipse
 Download the zip file & Un zip (extract the contents) the zip file.
 Check if the folder contains a pom.xml file.  Highlighted in the image below. You can also open the folder in windows explorer and check if it contains pom.xml file.  
-import-maven-project-into-eclipse-1.png
+![Image](/images/import-maven-project-into-eclipse-1.png)
 Copy the folder path into clipboard. (ctrl + c)  
 Launch up Eclipse and give folder name (Other folder name) as the workspace folder. Click OK.  
-import-java-eclipse-project-2.png
+![Image](/images/import-java-eclipse-project-2.png)
 Once Eclipse Launches up Go To File -> Import -> Maven -> Existing Maven Projects. Click Next.  
-import-maven-project-into-eclipse-2.png
+![Image](/images/import-maven-project-into-eclipse-2.png)
 Select Root Directory as the folder we copied earlier (the folder which contained the pom.xml file).  
 You should see a project highlighted in the Projects section.  
 If you are in a multi module project, then you would see multi projects ready for import.  
-import-maven-project-into-eclipse-3.png
+![Image](/images/import-maven-project-into-eclipse-3.png)
 If you do not see any project, you are checking a wrong folder. Make sure you browse and select the correct folder containing the pom.xml files.
 Click Finish.
 Your project would be imported and You are ready to work on it.  
-import-maven-project-into-eclipse-4.png
+![Image](/images/import-maven-project-into-eclipse-4.png)
 Good Luck and Have a Safe Party
 
 # Maven
@@ -135,11 +133,11 @@ Good Luck and Have a Safe Party
 ### Standalone installation
 Check if Java is installed properly. Type in the command “java –version” as shown in the screen. If it does not work, go to the trouble shooting section of Java or Reinstall Java.  
 Type in the command “java –version” as shown in the screen. If it does not work, go to the trouble shooting section.  
-java-version-command.png
+![Image](/images/java-version-command.png)
 
 Note that Maven 3.3 requires JDK 1.7 or above, Maven 3.2 requires JDK 1.6 or above, while Maven 3.0/3.1 requires JDK 1.5 or above.
 Download Apache Maven. Visit Maven official website, download the Maven zip file. Example : apache-maven-3.3.3-bin.zip  
-maven-download.png
+![Image](/images/maven-download.png)
 
 #### On Windows
 Unzip the distribution archive, i.e. apache-maven-3.3.3-bin.zip to the directory you wish to install Maven 3.3.3. These instructions assume you chose C:\maven. The subdirectory apache-maven-3.3.3 will be created from the archive.
@@ -147,7 +145,7 @@ Add the unpacked distribution's bin directory to your user PATH environment vari
 You can check if you are using the right value by opening up the folder using “cd C:\maven\apache-maven-3.3.3\bin” and then typing the command “mvn --version”.
 Make sure that JAVA_HOME exists in your user variables or in the system variables and it is set to the location of your JDK, e.g. C:\Program Files\Java\jdk1.7.0_51.
 Open a new command prompt (Winkey + R then type cmd) (or terminal on mac) and run “mvn –version” to verify that it is correctly installed.  
-maven-check-installation.png
+![Image](/images/maven-check-installation.png)
 
 #### Unix-based Operating Systems (Linux, Solaris and Mac OS X)
 Extract the distribution archive, i.e. apache-maven-3.3.3-bin.tar.gz to the directory you wish to install Maven 3.3.3. These instructions assume you chose /usr/local/apache-maven. The subdirectory apache-maven-3.3.3 will be created from the archive.
@@ -156,7 +154,7 @@ Make sure that JAVA_HOME is set to the location of your JDK, e.g. export JAVA_HO
 
 ## Check
 Run mvn --version to verify that it is correctly installed.  
-maven-check-installation.png
+![Image](/images/maven-check-installation.png)
 
 ## Troubleshooting
 
