@@ -72,9 +72,7 @@ Eclipse is the most popular open source Java IDE.
 
 5. Wait for the download to complete. Extract the zip file to a folder (Example : c:\eclipse).
 
-6. Note that there is a known problem with the built-in decompression utility on all current versions of Windows. We recommend that you use a more robust decompression utility such as the open source 7zip when decompressing an Eclipse download. Some people report success when initially decompressing Eclipse into a root directory (e.g. c:\) and then moving it to a more appropriate home (e.g. c:\Program Files\Eclipse)
-
-7. Refer to Troubleshooting section of https://wiki.eclipse.org/Eclipse/Installation for more details about troubleshooting Installations
+6. That it you are ready to launch up eclipse
 
 ## Check
 
@@ -82,9 +80,14 @@ Eclipse is the most popular open source Java IDE.
 
 ## Troubleshooting
 
+- Note that there is a known problem with the built-in decompression utility on all current versions of Windows. We recommend that you use a more robust decompression utility such as the open source 7zip when decompressing an Eclipse download. Some people report success when initially decompressing Eclipse into a root directory (e.g. c:\) and then moving it to a more appropriate home (e.g. c:\Program Files\Eclipse)
+- Refer to Troubleshooting section of https://wiki.eclipse.org/Eclipse/Installation for more details about troubleshooting Installations
+
 ## First 5 Steps
 
-> If you are using mac, use Cmd instead of Ctrl. In Windows, use Windows -> Preferences for Preferences.
+> If you are using mac, use Cmd instead of Ctrl. 
+
+> In Windows, use Windows -> Preferences for Preferences.
 
 - Step 1 : Create a Java &amp; Maven Project 
   - Create and run a Java class
