@@ -91,7 +91,7 @@ Eclipse is the most popular open source Java IDE.
 
 > In Windows, use Windows -> Preferences for Preferences.
 
-- Step 1 : Create a Java &amp; Maven Project 
+- Step 1 : Create a Java Project 
   - Create and run a Java class
   - Create and run a JUnit test
 - Step 2 : Keyboard Shortcuts
@@ -103,15 +103,11 @@ Eclipse is the most popular open source Java IDE.
     - Rename a Class - What suggestions are offered?
     - new Integer() - What suggestions are offered?
   - Ctrl + Shift + R (and T)
-  - Ctrl + Shift + L
   - F3 (Goto declaration)
   - F4 (Type Hierarchy)
-- Step 3 : Important Features
-  - Views and Perspectives
-  - Save Actions
-- Step 4 : Import a Maven Project
-  - We will this example - https://github.com/in28minutes/SpringMvcStepByStep
-  - Run basic maven commands
+  - Ctrl + Shift + L
+- Step 3 : Views and Perspectives
+- Step 4 : Save Actions
 - Step 5 : Code Generation
     - Alt + Shift + S
       - Getters and Setters
@@ -171,14 +167,17 @@ Download Apache Maven from Maven official website, https://maven.apache.org. Exa
  - Create a java project with a class and unit test
  - run "mvn clean install" 
  - Build LifeCycle - Validate, Compile, Test, Package, Integration Test, Verify, Install, Deploy
-
-### Step 2 : Convention over Configuration
- - Pre defined folder structure
+ - Convention over Configuration - Pre defined folder structure
 	- Source Code
 		- ${basedir}/src/main/java
 		- ${basedir}/src/main/resources
 	- Test Code
 		- ${basedir}/src/test
+
+### Step 2 : Import a Maven project
+  - We will this example - https://github.com/in28minutes/SpringMvcStepByStep
+  - Run basic maven commands
+    - mvn tomcat7:run
 
 ### Step 3 : Basic Maven Commands
  - mvn --version
@@ -210,6 +209,11 @@ Download Apache Maven from Maven official website, https://maven.apache.org. Exa
 - Embedded Maven in Eclipse
 
 ## First 5 Steps
+### Step 1 : Green Bar
+### Step 2 :
+### Step 3 :
+### Step 4 :
+### Step 5 :
 
 # Mockito
 
@@ -220,6 +224,11 @@ Download Apache Maven from Maven official website, https://maven.apache.org. Exa
 - Knowledge of JUnit
 
 ## First 5 Steps
+### Step 1 :
+### Step 2 :
+### Step 3 :
+### Step 4 :
+### Step 5 :
 
 # Spring
 
@@ -229,6 +238,11 @@ Download Apache Maven from Maven official website, https://maven.apache.org. Exa
 - Embedded Maven in Eclipse
 
 ## First 5 Steps
+### Step 1 :
+### Step 2 :
+### Step 3 :
+### Step 4 :
+### Step 5 :
 
 
 # Spring Boot
@@ -241,6 +255,11 @@ Coming Soon..
 - Embedded Maven in Eclipse
 
 ## First 5 Steps
+### Step 1 :
+### Step 2 :
+### Step 3 :
+### Step 4 :
+### Step 5 :
 
 # Kotlin
 
@@ -251,9 +270,14 @@ Coming Soon..
 - Eclipse
 - Embedded Maven in Eclipse
 
-## Installing Kotlin Plugin for Eclipse
+## Installation
 
 ## First 5 Steps
+### Step 1 :
+### Step 2 :
+### Step 3 :
+### Step 4 :
+### Step 5 :
 
 # Postman
 
@@ -264,22 +288,22 @@ Coming Soon..
 - Eclipse
 - Embedded Maven in Eclipse
 
-## Installing Kotlin Plugin for Eclipse
+## Installation
 
 ## First 5 Steps
 
-# MySql
+# H2 in-memory database
 
 Coming Soon..
 
 ## Prerequisites
 - None
 
-## Installing
+## Installation
 
 ## First 5 Steps
 
-# H2 in-memory database
+# MySql
 
 Coming Soon..
 
