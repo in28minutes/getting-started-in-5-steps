@@ -84,8 +84,7 @@ Eclipse is the most popular open source Java IDE.
 
 ## First 5 Steps
 
-NOTE : If you are using mac, use Cmd instead of Ctrl
-NOTE : In Windows, use Windows -> Preferences for Preferences
+> If you are using mac, use Cmd instead of Ctrl. In Windows, use Windows -> Preferences for Preferences.
 
 - Step 1 : Create a Java &amp; Maven Project 
   - Create and run a Java class
