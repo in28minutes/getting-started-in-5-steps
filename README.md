@@ -11,7 +11,7 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito &amp;
 1. Search for “install java jdk” on google. 
 ![Image](/images/google-search-install-java-jdk.png)
 
-2. Choose the first link. You should go to the oracle site.
+2. Choose the first link. You should go to the oracle site. The direct link is http://www.oracle.com/technetwork/java/javase/downloads/index.html
 ![Image](/images/oracle-website-java-installation.png)
 
 3. Select the Java Platform JDK Link.  
@@ -20,7 +20,7 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito &amp;
 4. Accept the license agreement.  
 ![Image](/images/oracle-java-license-agreement.png)
 
-5. Choose the Java Install for your Operating System.  If you are windows 64 bit operating system, choose the Windows x64 java. 
+5. Choose the Java Install for your Operating System.  If you are windows 64 bit operating system, choose the Windows x64 java. If you are using windows and do not know if you are using 64-bit or 32-bit, you can visit https://support.microsoft.com/en-ae/help/15056/windows-7-32-64-bit-faq.
 ![Image](/images/choose-java-installation-for-your-os.png)
 
 6. Wait for the download to complete. Double click the file from the downloads folder.
@@ -36,10 +36,13 @@ Java Installer would launch up. Click Continue.
 9. Click close. We are ready to Rock and Roll. Do a Dance.
 
 ## Check
-
-1. If you are on Windows : Open the Command Prompt window by clicking the Start button  , clicking All Programs, clicking Accessories, and then clicking Command Prompt. (or use Ctrl + Esc, and type in cmd and launch up command)
+1. If you are on Windows : Open the Command Prompt window by 
+  * Click the Start button
+  * Select All Programs -> Accessories > Command Prompt. 
+  * Or use Ctrl + Esc, and type in cmd and launch up command.
 2. If you are on Mac or other OS, launch up Terminal.
-3. Type in the command “java –version” as shown in the screen. If it does not work, go to the trouble shooting section.  
+	* cmd + space -> Type terminal -> Press enter
+3. Type in the command “java –version” as shown in the screen. If it does not work, go to the trouble shooting section.
 ![Image](/images/java-version-command.png)
 
 ## Troubleshooting
@@ -48,17 +51,18 @@ Java Installer would launch up. Click Continue.
 3.	If you get file corrupt message, download the installation file again.
 4.	Check if you are on 32-bit OS or 64-bit OS and ensure you are making use of the right java download.
 
-
 # Eclipse
 
+Eclipse is the most popular open source Java IDE.
+
 ## Prerequisites
-- Java
+- Java JDK 8
 
 ## Installation
-1. Check if Java is installed properly. Type in the command “java –version” as shown in the screen. If it does not work, go to the trouble shooting section of Java or Reinstall Java. 
+1. Check if Java is installed properly. Open terminal or command prompt. Type in the command “java –version” as shown in the screen. If it does not work, go to the trouble shooting section of Java or Reinstall Java.  Minimum Java JDK Version is Java 8.
 ![Image](/images/java-version-command.png)
 
-2. Search google for “download eclipse” and choose the first result. 
+2. Search google for “download eclipse” and choose the first result. The direct link is http://www.eclipse.org/downloads/eclipse-packages/.
 ![Image](/images/google-search-download-eclipse.png)
 
 3. Choose the right Operation System. 
@@ -72,48 +76,44 @@ Java Installer would launch up. Click Continue.
 
 7. Refer to Troubleshooting section of https://wiki.eclipse.org/Eclipse/Installation for more details about troubleshooting Installations
 
-
 ## Check
+
+- We will use the first step to check if eclipse is properly installed.
 
 ## Troubleshooting
 
 ## First 5 Steps
 
-### Importing Java Eclipse Project
-1. Download the zip file & Un zip (extract the contents) the zip file.
-2. Check if the folder contains a .project file.  Highlighted in the image below. You can also open the folder in windows explorer and check if it contains .project & .settings & .classpath files . (On mac these files are hidden. We used the command ls –la) 
-![Image](/images/import-java-eclipse-project-1.png)
-3. Copy the folder path into clipboard. (ctrl + c)  
-4. Launch up Eclipse and give folder name (Other folder name) as the workspace folder. Click OK.  
-![Image](/images/import-java-eclipse-project-2.png)
-5. Once Eclipse Launches up Go To File -> Import -> General -> Existing Projects into Workspace. Click Next. 
-![Image](/images/import-java-eclipse-project-3.png)
-6. Select Root Directory as the folder we copied earlier (the folder which contained .project, .classpath and .settings files).  
-You should see a project highlighted in the Projects section.  
-7. If you do not see any project, you are checking a wrong folder. Make sure you browse and select the correct folder containing the .project and the .classpath files.
-8. Click Finish.
-8. Your project would be imported and You are ready to work on it.  
-![Image](/images/import-java-eclipse-project-4.png)
-10. Good Luck and Have a Safe Party
+NOTE : If you are using mac, use Cmd instead of Ctrl
+NOTE : In Windows, use Windows -> Preferences for Preferences
 
-### 5. Importing a Maven Project into Eclipse
-1. Download the zip file & Un zip (extract the contents) the zip file.
-2. Check if the folder contains a pom.xml file.  Highlighted in the image below. You can also open the folder in windows explorer and check if it contains pom.xml file.  
-![Image](/images/import-maven-project-into-eclipse-1.png)
-3. Copy the folder path into clipboard. (ctrl + c)  
-4. Launch up Eclipse and give folder name (Other folder name) as the workspace folder. Click OK.  
-![Image](/images/import-java-eclipse-project-2.png)
-5. Once Eclipse Launches up Go To File -> Import -> Maven -> Existing Maven Projects. Click Next.  
-![Image](/images/import-maven-project-into-eclipse-2.png)
-6. Select Root Directory as the folder we copied earlier (the folder which contained the pom.xml file).  
-7. You should see a project highlighted in the Projects section.  
-8. If you are in a multi module project, then you would see multi projects ready for import.  
-![Image](/images/import-maven-project-into-eclipse-3.png)
-9. If you do not see any project, you are checking a wrong folder. Make sure you browse and select the correct folder containing the pom.xml files.
-10. Click Finish.
-11. Your project would be imported and You are ready to work on it.  
-![Image](/images/import-maven-project-into-eclipse-4.png)
-12. Good Luck and Have a Safe Party
+- Step 1 : Create a Java &amp; Maven Project 
+  - Create and run a Java class
+  - Create and run a JUnit test
+- Step 2 : Keyboard Shortcuts
+  - Ctrl + Space
+    - BigDecimal - Auto Suggestion
+    - File Name and Class Name does not match - Display Errors
+    - Templates - main, fore, sysout, syserr
+  - Ctrl + 1
+    - Rename a Class - What suggestions are offered?
+    - new Integer() - What suggestions are offered?
+  - Ctrl + Shift + R (and T)
+  - Ctrl + Shift + L
+  - F3 (Goto declaration)
+  - F4 (Type Hierarchy)
+- Step 3 : Important Features
+  - Views and Perspectives
+  - Save Actions
+- Step 4 : Import a Maven Project
+  - We will this example - https://github.com/in28minutes/SpringMvcStepByStep
+  - Run basic maven commands
+- Step 5 : Code Generation
+    - Alt + Shift + S
+      - Getters and Setters
+      - toString()
+      - equals()
+      - hashcode()
 
 # Maven
 
