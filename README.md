@@ -9,7 +9,9 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito &amp;
 ## Installation
 
 1. Search for “install java jdk” on google. 
-google-search-install-java-jdk.png
+![Image](/images/google-search-install-java-jdk.png) 
+
+
 
 2. Choose the first link. You should go to the oracle site.
 oracle-website-java-installation.png
