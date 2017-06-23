@@ -80,6 +80,8 @@ Eclipse is the most popular open source Java IDE.
 
 ## Troubleshooting
 
+- You should use a JDK with Eclipse (not a JRE)
+  - (Window/Eclipse) -> Preferences -> Java -> Installed JRE's
 - Note that there is a known problem with the built-in decompression utility on all current versions of Windows. We recommend that you use a more robust decompression utility such as the open source 7zip when decompressing an Eclipse download. Some people report success when initially decompressing Eclipse into a root directory (e.g. c:\) and then moving it to a more appropriate home (e.g. c:\Program Files\Eclipse)
 - Refer to Troubleshooting section of https://wiki.eclipse.org/Eclipse/Installation for more details about troubleshooting Installations
 
@@ -122,33 +124,40 @@ Eclipse is the most popular open source Java IDE.
 ## Prerequisites
 
 - Java
-- Embedded with Eclipse
+- Eclipse (When using embedded eclipse)
 
 ## Installation
-- Recommended to use Maven embedded in Eclipse
+- If you are a beginners, we recommended to use Maven embedded in Eclipse. If you have your feet firmly on ground, go to the section on Standalone installation.
 
 ## Check Embedded Maven in Eclipse
+- Import a Maven Project into eclipse
+  - We will this example - https://github.com/in28minutes/SpringMvcStepByStep
+  - Run basic maven commands
 
 ### Standalone installation
 1. Check if Java is installed properly. Type in the command “java –version” as shown in the screen. If it does not work, go to the trouble shooting section of Java or Reinstall Java.  
 ![Image](/images/java-version-command.png)
 
 > Note that Maven 3.3 requires JDK 1.7 or above, Maven 3.2 requires JDK 1.6 or above, while Maven 3.0/3.1 requires JDK 1.5 or above.
-Download Apache Maven. Visit Maven official website, download the Maven zip file. Example : apache-maven-3.3.3-bin.zip  
+
+Download Apache Maven from Maven official website, https://maven.apache.org. Example : apache-maven-3.3.3-bin.zip 
+
 ![Image](/images/maven-download.png)
 
 #### On Windows
-1. Unzip the distribution archive, i.e. apache-maven-3.3.3-bin.zip to the directory you wish to install Maven 3.3.3. These instructions assume you chose C:\maven. The subdirectory apache-maven-3.3.3 will be created from the archive.
+1. Unzip the distribution archive, i.e. apache-maven-3.3.3-bin.zip to the directory you wish to install Maven 3.3.3. These instructions assume you chose C:\maven. The subdirectory apache-maven-3.3.3 will be created from the archive. Have no spaces in the folder path.
 2. Add the unpacked distribution's bin directory to your user PATH environment variable by opening up the system properties (WinKey + Pause), selecting the "Advanced" tab, and the "Environment Variables" button, then adding or selecting the PATH variable in the user variables with the value C:\maven\apache-maven-3.3.3\bin.
 3. You can check if you are using the right value by opening up the folder using “cd C:\maven\apache-maven-3.3.3\bin” and then typing the command “mvn --version”.
 4. Make sure that JAVA_HOME exists in your user variables or in the system variables and it is set to the location of your JDK, e.g. C:\Program Files\Java\jdk1.7.0_51.
 5. Open a new command prompt (Winkey + R then type cmd) (or terminal on mac) and run “mvn –version” to verify that it is correctly installed.  
 ![Image](/images/maven-check-installation.png)
+6. Refer https://www.mkyong.com/maven/how-to-install-maven-in-windows/ or https://www.tutorialspoint.com/maven/maven_environment_setup.htm for more details.
 
 #### Unix-based Operating Systems (Linux, Solaris and Mac OS X)
 1. Extract the distribution archive, i.e. apache-maven-3.3.3-bin.tar.gz to the directory you wish to install Maven 3.3.3. These instructions assume you chose /usr/local/apache-maven. The subdirectory apache-maven-3.3.3 will be created from the archive.
 2. In a command terminal, add unpacked distribution's bin to your PATH environment variable, e.g. export PATH=$PATH:/usr/local/apache-maven/apache-maven-3.3.3/bin.
 3. Make sure that JAVA_HOME is set to the location of your JDK, e.g. export JAVA_HOME=/usr/java/jdk1.7.0_51 .
+4. If you are having problems refer https://stackoverflow.com/questions/8826881/maven-install-on-mac-os-x
 
 ## Check
 * Run mvn --version to verify that it is correctly installed.  
@@ -158,19 +167,40 @@ Download Apache Maven. Visit Maven official website, download the Maven zip file
 
 ## First 5 Steps
 
-### Important Maven Commands
+### Step 1 : Creating a Maven project
+ - Create a java project with a class and unit test
+ - run "mvn clean install" 
+ - Build LifeCycle - Validate, Compile, Test, Package, Integration Test, Verify, Install, Deploy
 
-Setting Up an Example Maven Project
-- Which Project?
+### Step 2 : Convention over Configuration
+ - Pre defined folder structure
+	- Source Code
+		- ${basedir}/src/main/java
+		- ${basedir}/src/main/resources
+	- Test Code
+		- ${basedir}/src/test
 
-#### mvn clean install
+### Step 3 : Basic Maven Commands
+ - mvn --version
+ - mvn compile (compiles source files)
+ - mvn test-compile (compiles test files) - one thing to observe is this also compiles source files
+ - mvn clean - deletes target directory
+ - mvn test - run unit tests
+ - mvn package - creates the jar
 
-#### mvn tomcat7:run
+### Step 4 : How does Maven Work?
+ - Local Repository
+ - Maven repository 
+   - stores all the versions of all dependencies. JUnit 4.2,4.3,4.4
+   - mvn install - copies the created jar to local maven repository - a temp folder on my machine where maven stores the files.
 
-* Switch to directory containing the web application (war pom.xml).  In the below example the war directory is in28minutes-web-servlet-jsp. 
-* Run the command “mvn tomcat7:run”. Everything should succeed and you should see a message that the server is started. Note down the port number. 
-* Run the application in browser http://localhost:8080/. It should work and you are all setup to run a web application  in tomcat. 
-* Good Luck with learning developing applications now..                
+### Step 5 : Advanced Maven Commands
+- help:effective-settings
+- help:effective-pom
+- dependency:tree
+- dependency:sources
+- --debug
+- Maven Archetypes -> archetype:generate
 
 # JUnit
 
