@@ -447,11 +447,11 @@ Look at H2 Console : http://localhost:8080/h2-console
 Use db url jdbc:h2:mem:testdb
 
 ## First 5 Steps
-### Step 1 : Create a Spring Boot Project with JPA and H2
-### Step 2 : Setup the code example
-### Step 3 : 
-### Step 4 :
-### Step 5 :
+### Step 1 : Import an exising project using inmemory database
+### Step 2 : Understanding the JPA Project
+### Step 3 : Using in-memory database in Unit Tests
+### Step 4 : Using in-memory database to run actual application
+### Step 5 : Using H2 Console
 ### Next Steps
 
 # MySql
