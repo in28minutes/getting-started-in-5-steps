@@ -1,7 +1,24 @@
 # Getting Started in 5 Steps
-Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito &amp; Spring in 5 easy steps
+Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spring, Spring Boot &amp; Kotlin in 5 easy steps
 
-# Java
+# Overview
+
+- Setting up these examples
+ - Video link - TODO
+- Languages/Tools
+  - Java
+  - Eclipse
+     - Embedded Maven
+  - Maven
+  - Kotlin
+  - Postman
+  - MySQL
+  - H2
+- Frameworks
+  - Spring
+  - Spring Boot
+  - JUnit
+  - Mockito
 
 ## Prerequisites
 - None
@@ -123,12 +140,15 @@ Eclipse is the most popular open source Java IDE.
 - Eclipse (When using embedded eclipse)
 
 ## Installation
-- If you are a beginners, we recommended to use Maven embedded in Eclipse. If you have your feet firmly on ground, go to the section on Standalone installation.
+- If you are a beginner, we recommended to use Maven embedded in Eclipse. If you have your feet firmly on ground, go to the section on standalone installation.
 
 ## Check Embedded Maven in Eclipse
 - Import a Maven Project into eclipse
   - We will this example - https://github.com/in28minutes/SpringMvcStepByStep
   - Run basic maven commands
+
+## Troubleshooting Embedded Maven in Eclipse
+
 
 ### Standalone installation
 1. Check if Java is installed properly. Type in the command “java –version” as shown in the screen. If it does not work, go to the trouble shooting section of Java or Reinstall Java.  
@@ -201,49 +221,75 @@ Download Apache Maven from Maven official website, https://maven.apache.org. Exa
 - --debug
 - Maven Archetypes -> archetype:generate
 
+### Next Steps
+
 # JUnit
 
 ## Prerequisites
 - Java
 - Eclipse
-- Embedded Maven in Eclipse
+  - Embedded Maven in Eclipse
 
 ## First 5 Steps
-### Step 1 : Green Bar
-### Step 2 :
-### Step 3 :
-### Step 4 :
-### Step 5 :
+### Step 1 : First JUnit Project and Green Bar
+ - What is JUnit?
+ - First Project with JUnit
+ - First JUnit Class
+ - No Failure is Success
+### Step 2 : First Code and First Unit Test
+ - MyMath class with sum method
+ - Unit test for the sum method
+### Step 3 : Other assert methods
+ - assertTrue and assertFalse methods
+### Step 4 : Important annotations
+  - @Before @After annotations
+  - @BeforeClass @AfterClass annotations
+### Step 5 : Advantages of Unit Testing and How to make best use of JUnit?
+- JUnit tests are automated vs Manual Testing
+- Run in Continuous Integration - Jenkins
+### Next Steps
 
 # Mockito
+
+Visit Mockito Official Documentation - [Mockito Documentation] (http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html)
 
 ## Prerequisites
 - Java
 - Eclipse
-- Embedded Maven in Eclipse
+  - Embedded Maven in Eclipse
 - Knowledge of JUnit
+- Easier Static Imports
+
+  - Window > Preferences > Java > Editor > Content Assist > Favorites
+    - org.junit.Assert
+    - org.mockito.BDDMockito
+    - org.mockito.Mockito
+    - org.hamcrest.Matchers
+    - org.hamcrest.CoreMatchers
 
 ## First 5 Steps
-### Step 1 :
-### Step 2 :
-### Step 3 :
-### Step 4 :
-### Step 5 :
+### Step 1 : Setting up an example
+### Step 2 : Stubs.
+### Step 3 : Your first mock. 
+### Step 4 : Mockito Annotations. @Mock, @InjectMocks, @RunWith(MockitoJUnitRunner.class)
+### Step 5 : Mocking List interface
+### Next Steps
 
 # Spring
 
 ## Prerequisites
 - Java
 - Eclipse
-- Embedded Maven in Eclipse
+  - Embedded Maven in Eclipse
 
-## First 5 Steps
-### Step 1 :
-### Step 2 :
-### Step 3 :
-### Step 4 :
-### Step 5 :
-
+## First 5 Steps - Actually 6
+### Step 1 : First Spring Example - Searching and Sorting - Setup
+### Step 2 : First Spring Example - Searching and Sorting - Refactoring
+### Step 3 : First Spring Example - Searching and Sorting - Using Spring
+### Step 4 : Important Spring Annotations - @Component, @Autowired
+### Step 5 : Spring Application Context - Container Managed Beans
+### Step 6 : Types of Dependency Injection
+### Next Steps
 
 # Spring Boot
 
@@ -252,14 +298,15 @@ Coming Soon..
 ## Prerequisites
 - Java
 - Eclipse
-- Embedded Maven in Eclipse
+  - Embedded Maven in Eclipse
 
 ## First 5 Steps
-### Step 1 :
-### Step 2 :
-### Step 3 :
-### Step 4 :
-### Step 5 :
+### Step 1 : Setup and Launch with Spring Initializr
+### Step 2 : Create a Simple REST Controller
+### Step 3 : Spring Boot vs Spring vs Spring MVC
+### Step 4 : Spring Boot Actuator
+### Step 5 : Embedded servlet containers : Switch to Jetty or Undertow
+### Next Steps
 
 # Kotlin
 
@@ -268,7 +315,26 @@ Coming Soon..
 ## Prerequisites
 - Java
 - Eclipse
-- Embedded Maven in Eclipse
+  - Embedded Maven in Eclipse
+
+## Installation
+
+## First 5 Steps
+### Step 1 : Installing Kotlin Java Plugin - https://marketplace.eclipse.org/content/kotlin-plugin-eclipse
+### Step 2 : First Kotlin Java Project and class
+### Step 3 : Basics - Variables in Kotlin
+### Step 4 : Functions in Kotlin
+### Step 5 : Kotlin Data Class
+### Next Steps
+
+# Postman
+
+Coming Soon..
+
+## Prerequisites
+- Java
+- Eclipse
+  - Embedded Maven in Eclipse
 
 ## Installation
 
@@ -278,19 +344,7 @@ Coming Soon..
 ### Step 3 :
 ### Step 4 :
 ### Step 5 :
-
-# Postman
-
-Coming Soon..
-
-## Prerequisites
-- Java
-- Eclipse
-- Embedded Maven in Eclipse
-
-## Installation
-
-## First 5 Steps
+### Next Steps
 
 # H2 in-memory database
 
@@ -302,6 +356,12 @@ Coming Soon..
 ## Installation
 
 ## First 5 Steps
+### Step 1 :
+### Step 2 :
+### Step 3 :
+### Step 4 :
+### Step 5 :
+### Next Steps
 
 # MySql
 
@@ -312,4 +372,6 @@ Coming Soon..
 
 ## Installing
 
-## First 5 Steps
+## Check
+
+## Trouble Shooting
