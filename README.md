@@ -327,25 +327,6 @@ Coming Soon..
 ### Step 5 : Kotlin Data Class
 ### Next Steps
 
-# Postman
-
-Coming Soon..
-
-## Prerequisites
-- Java
-- Eclipse
-  - Embedded Maven in Eclipse
-
-## Installation
-
-## First 5 Steps
-### Step 1 :
-### Step 2 :
-### Step 3 :
-### Step 4 :
-### Step 5 :
-### Next Steps
-
 # H2 in-memory database
 
 Coming Soon..
@@ -354,9 +335,116 @@ Coming Soon..
 - None
 
 ## Installation
+- We will use a Spring Boot application to set it up.
+
+
+## Useful Snippets
+
+### Dependencies
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+</dependency>
+```
+
+### Entity bean
+```
+@Entity
+public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private String name;// Not perfect!! Should be a proper object!
+    private String role;// Not perfect!! An enum should be a better choice!
+
+    protected User() {
+    }
+
+    public User(String name, String role) {
+        super();
+        this.name = name;
+        this.role = role;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("User [id=%s, name=%s, role=%s]", id, name, role);
+    }
+
+}
+```
+
+### Repository
+```
+public interface UserRepository extends CrudRepository<User, Long> {
+}
+```
+
+
+### Using Repository to instantiate data
+```
+@Component
+public class UserCommandLineRunner implements CommandLineRunner {
+
+    private static final Logger log = LoggerFactory
+            .getLogger(UserCommandLineRunner.class);
+
+    @Autowired
+    private UserRepository repository;
+
+    @Override
+    public void run(String... args) {
+        // save a couple of customers
+        repository.save(new User("Ranga", "Admin"));
+        repository.save(new User("Ravi", "User"));
+        repository.save(new User("Satish", "Admin"));
+        repository.save(new User("Raghu", "User"));
+
+        log.info("-------------------------------");
+        log.info("Finding all users");
+        log.info("-------------------------------");
+        for (User user : repository.findAll()) {
+            log.info(user.toString());
+        }
+
+    }
+
+}
+```
+
+Useful Properties
+```
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/test
+spring.datasource.username=root
+spring.datasource.password=admin
+spring.datasource.initialize=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
 
 ## First 5 Steps
-### Step 1 :
+### Step 1 : 
 ### Step 2 :
 ### Step 3 :
 ### Step 4 :
