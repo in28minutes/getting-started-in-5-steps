@@ -443,10 +443,13 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
 
+Look at H2 Console : http://localhost:8080/h2-console
+Use db url jdbc:h2:mem:testdb
+
 ## First 5 Steps
-### Step 1 : 
-### Step 2 :
-### Step 3 :
+### Step 1 : Create a Spring Boot Project with JPA and H2
+### Step 2 : Setup the code example
+### Step 3 : 
 ### Step 4 :
 ### Step 5 :
 ### Next Steps
