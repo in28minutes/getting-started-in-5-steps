@@ -1,6 +1,16 @@
 # Getting Started in 5 Steps
 Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spring, Spring Boot &amp; Kotlin in 5 easy steps
 
+# Begin with End in Mind
+- Help as installation guides for all courses
+- Help troubleshott installation issues especially those with Maven
+- Help as introduction to basic frameworks in other courses
+
+# Note
+- Separate installation & troubleshooting of Maven/Eclipse from the first 5 steps to learn them
+- Leave existing courses as they are - Just update the installation guide links
+- Use these for new courses
+
 # Overview
 
 - Setting up these examples
@@ -17,7 +27,7 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
   - [Spring](#spring)
   - [Spring Boot](#spring-boot)
   - [JUnit](#junit)
-  - [Mockito](#Mockito)
+  - [Mockito](#mockito)
 
 # Java
 - Most popular language
