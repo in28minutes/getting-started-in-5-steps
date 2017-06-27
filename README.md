@@ -117,16 +117,13 @@ Eclipse is the most popular open source Java IDE.
   - You should use a JDK with Eclipse 
      - [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:compile (default-compile) on project in28minutes-multi-module-model: Compilation failure [ERROR] No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?
      - (Window/Eclipse) -> Preferences -> Java -> Installed JRE's
-     - http://stackoverflow.com/questions/19655184/no-compiler-is-provided-in-this-environment-perhaps-you-are-running-on-a-jre-ra
-     - http://stackoverflow.com/questions/13635563/setting-jdk-in-eclipse
-     - http://www.gamefromscratch.com/post/2011/11/15/Telling-Eclipse-to-use-the-JDK-instead-of-JRE.aspx
   - You need to be connected to internet
      - Maven-Error-Dependencies-Cannot-Be-Resolved - You are unable to connect to the maven repository to download the required plugins
-     - http://stackoverflow.com/questions/5074063/maven-error-failure-to-transfer
   - Configuring a Proxy 
-     - Maven plugin uses a settings file where the configuration can be set. Its path is available in Eclipse at Window|Preferences|Maven|User Settings. If the file doesn't exist, create it and put on something like this:
+     - Maven plugin uses a settings file where the configuration can be set. Its path is available in Eclipse at Window|Preferences|Maven|User Settings. If the file doesn't exist, create it and put on something like the example below
   - Force download of dependencies
      - ```mvn dependency:purge-local-repository```
+     - Delete your local repository - LAST OPTION
 
 
 ```
