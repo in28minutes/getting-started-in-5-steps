@@ -14,9 +14,6 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
   - [Java](#java)
   - [Eclipse](#eclipse)
   - [Embedded Maven in Eclipse](#embedded-maven-in-eclipse)
-  - [Maven](#maven-standalone)
-  - [Kotlin](#kotlin)
-  - MySQL [COMING SOON]
 - Taking First 5 Steps
   - [Eclipse](#first-5-steps-in-eclipse)
   - [Maven](#first-5-steps-in-maven)
@@ -162,15 +159,6 @@ Download Apache Maven from Maven official website, https://maven.apache.org. Exa
 ### Check
 * Run mvn --version to verify that it is correctly installed.  
 ![Image](/images/maven-check-installation.png)
-
-## Kotlin
-
-### Prerequisites
-- Java/JDK
-- Eclipse
-
-### Installation
-Installing Kotlin Java Plugin - https://marketplace.eclipse.org/content/kotlin-plugin-eclipse
 
 ## MySql
 
@@ -323,6 +311,7 @@ Quotes from Andrey Breslav, Kotlin language designer
 
 > Kotlin is designed to be an industrial-strength object-oriented language, and a "better language" than Java, but still be fully interoperable with Java code, allowing companies to make a gradual migration from Java to Kotlin.
 
+- Step 0 : Installing Kotlin Java Plugin - https://marketplace.eclipse.org/content/kotlin-plugin-eclipse
 - Step 1 : Introduction to Kotlin
 - Step 2 : First Kotlin Java Project and class
 - Step 3 : Basics - Variables in Kotlin
