@@ -3,13 +3,8 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
 
 # Begin with End in Mind
 - Help as installation guides for all courses
-- Help troubleshott installation issues especially those with Maven
+- Help troubleshoot installation issues especially those with Maven
 - Help as introduction to basic frameworks in other courses
-
-# Note
-- Separate installation & troubleshooting of Maven/Eclipse from the first 5 steps to learn them
-- Leave existing courses as they are - Just update the installation guide links
-- Use these for new courses
 
 # Overview
 
@@ -110,8 +105,6 @@ Eclipse is the most popular open source Java IDE.
 
 ## Troubleshooting
 
-- You should use a JDK with Eclipse (not a JRE)
-  - (Window/Eclipse) -> Preferences -> Java -> Installed JRE's
 - Note that there is a known problem with the built-in decompression utility on all current versions of Windows. We recommend that you use a more robust decompression utility such as the open source 7zip when decompressing an Eclipse download. Some people report success when initially decompressing Eclipse into a root directory (e.g. c:\) and then moving it to a more appropriate home (e.g. c:\Program Files\Eclipse)
 - Refer to Troubleshooting section of https://wiki.eclipse.org/Eclipse/Installation for more details about troubleshooting Installations
 
@@ -161,6 +154,11 @@ Eclipse is the most popular open source Java IDE.
   - Run basic maven commands
 
 ## Troubleshooting Embedded Maven in Eclipse
+
+> In Windows, use Windows -> Preferences for Preferences.
+
+- You should use a JDK with Eclipse (not a JRE)
+  - (Window/Eclipse) -> Preferences -> Java -> Installed JRE's
 
 ## First 5 Steps
 Refer First 5 Steps of Maven Standalone below.
