@@ -9,11 +9,13 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
 # Overview
 
 - Setting up these examples
- - Video link - TODO
+ - Video link - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 - Installing & Troubleshooting
-  - [Java](#java)
-  - [Eclipse](#eclipse)
-  - [Embedded Maven in Eclipse](#testing-eclipse-with-embedded-maven)
+  - [Overview](#overview) Video - https://www.youtube.com/watch?v=Ipt7J1MFWPo&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=1
+  - [Java](#java) Video - https://www.youtube.com/watch?v=9bdgxY841v0&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=2
+  - [Eclipse](#eclipse) Video - https://www.youtube.com/watch?v=-KV0QIqh2kA&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=3
+  - [Embedded Maven in Eclipse](#testing-eclipse-with-embedded-maven) Video - https://www.youtube.com/watch?v=g8Sw0UPPjKY&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=4
+  - [Troubleshooting Eclipse with Embedded Maven](#troubleshooting-eclipse-with-embedded-maven) Video - https://www.youtube.com/watch?v=ZZw8XNz5N-c&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=5
 - Taking First 5 Steps
   - [Eclipse](#first-5-steps-in-eclipse)
   - [Maven](#first-5-steps-in-maven)
@@ -27,9 +29,12 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
 
 # Installation & Troubleshooting
 
+- Video link - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
+
 ## Java
 - Most popular language
 - http://github.com/in28minutes/getting-started-in-5-steps#Java
+- Video - https://www.youtube.com/watch?v=9bdgxY841v0&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=2
 
 ### Prerequisites
 - None
@@ -83,6 +88,8 @@ Java Installer would launch up. Click Continue.
 
 Eclipse is the most popular open source Java IDE.
 
+Installation Video - https://www.youtube.com/watch?v=-KV0QIqh2kA&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=3
+
 ### Prerequisites
 - Java JDK 8
 
@@ -106,14 +113,20 @@ Eclipse is the most popular open source Java IDE.
 
 ## Testing Eclipse with Embedded Maven
 
-Maven is one of the most popular Java build tools. Its is used to manage dependencies of java projects and build deployable units. We will use embedded maven in eclipse in our course. We will do the following things to test our embedded maven installation:
+Maven is one of the most popular Java build tools. Its is used to manage dependencies of java projects and build deployable units. We will use embedded maven in eclipse in our course. 
+
+Video - https://www.youtube.com/watch?v=g8Sw0UPPjKY&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=4
+
+We will do the following things to test our embedded maven installation:
 - Create a new Eclipse workspace
 - Download a new Spring Boot project from http://start.spring.io
 - Import and run the Spring Boot Project
 
-### Troubleshooting
+### Troubleshooting Eclipse with Embedded Maven
 
 > In Windows, use Windows -> Preferences for Preferences.
+
+Video - https://www.youtube.com/watch?v=ZZw8XNz5N-c&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=5
 
 - Things you would need to understand
   - You should use a JDK with Eclipse 
@@ -220,9 +233,9 @@ Coming Soon..
 - Step 2 : Keyboard Shortcuts
   - Ctrl + Space
     - BigDecimal - Auto Suggestion
-    - File Name and Class Name does not match - Display Errors
     - Templates - main, fore, sysout, syserr
   - Ctrl + 1
+    - File Name and Class Name does not match - Display Errors
     - Rename a Class - What suggestions are offered?
     - new Integer() - What suggestions are offered?
   - Ctrl + Shift + R (and T)
