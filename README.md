@@ -87,43 +87,77 @@ Eclipse is the most popular open source Java IDE.
 - Java JDK 8
 
 ### Installation
-1. Check if Java is installed properly. Open terminal or command prompt. Type in the command “java –version” as shown in the screen. If it does not work, go to the trouble shooting section of Java or Reinstall Java.  Minimum Java JDK Version is Java 8.
-![Image](/images/java-version-command.png)
-
-2. Search google for “download eclipse” and choose the first result. The direct link is http://www.eclipse.org/downloads/eclipse-packages/.
+1. Search google for “download eclipse” and choose the first result. The direct link is http://www.eclipse.org/downloads/eclipse-packages/.
 ![Image](/images/google-search-download-eclipse.png)
 
-3. Choose the right Operation System. 
+2. Choose the right Operation System. 
 ![Image](/images/eclipse-choose-installation.png)
 
-4. We recommend to choose “Eclipse IDE for Java EE Developers”. Choose 32 bit or 64 bit based on your operating system. (Right-click My Computer, and then click Properties. If "x64 Edition" is listed under System, your processor is capable of running a 64-bit version of Windows.)
+3. We recommend to choose “Eclipse IDE for Java EE Developers”. Choose 32 bit or 64 bit based on your operating system. (Right-click My Computer, and then click Properties. If "x64 Edition" is listed under System, your processor is capable of running a 64-bit version of Windows.)
 
-5. Wait for the download to complete. Extract the zip file to a folder (Example : c:\eclipse).
+4. Wait for the download to complete. Extract the zip file to a folder (Example : c:\eclipse).
 
-6. That it you are ready to launch up eclipse
+5. That it you are ready to launch up eclipse
+
+### Troubleshooting
+- Use 7Zip instead of windows built-in decompression utility.
+- Unzip to root folder (e.g. c:\) compared to a long directory path (e.g. c:\Program Files\Eclipse).
+- Some instructions at https://wiki.eclipse.org/Eclipse/Installation#Troubleshooting
+
+## Testing Eclipse with Embedded Maven
+- Create a new Eclipse workspace
+- Download a new Spring Boot project from http://start.spring.io
+- Import and run the Spring Boot Project
 
 ### Troubleshooting
 
-- Note that there is a known problem with the built-in decompression utility on all current versions of Windows. We recommend that you use a more robust decompression utility such as the open source 7zip when decompressing an Eclipse download. Some people report success when initially decompressing Eclipse into a root directory (e.g. c:\) and then moving it to a more appropriate home (e.g. c:\Program Files\Eclipse)
-- Refer to Troubleshooting section of https://wiki.eclipse.org/Eclipse/Installation for more details about troubleshooting Installations
-
-## Embedded Maven in Eclipse
-
-### Prerequisites
-- Java
-- Eclipse (When using embedded eclipse)
-- No installation is needed :)
-
-### Check Eclipse and Embedded Maven
-- Create a new Spring Boot project and import it.
-- Run basic maven commands
-
-### Troubleshooting Embedded Maven in Eclipse
-
 > In Windows, use Windows -> Preferences for Preferences.
 
-- You should use a JDK with Eclipse (not a JRE)
-  - (Window/Eclipse) -> Preferences -> Java -> Installed JRE's
+- Things you would need to understand
+  - You should use a JDK with Eclipse 
+     - [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:compile (default-compile) on project in28minutes-multi-module-model: Compilation failure [ERROR] No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?
+     - (Window/Eclipse) -> Preferences -> Java -> Installed JRE's
+     - http://stackoverflow.com/questions/19655184/no-compiler-is-provided-in-this-environment-perhaps-you-are-running-on-a-jre-ra
+     - http://stackoverflow.com/questions/13635563/setting-jdk-in-eclipse
+     - http://www.gamefromscratch.com/post/2011/11/15/Telling-Eclipse-to-use-the-JDK-instead-of-JRE.aspx
+  - You need to be connected to internet
+     - Maven-Error-Dependencies-Cannot-Be-Resolved - You are unable to connect to the maven repository to download the required plugins
+     - http://stackoverflow.com/questions/5074063/maven-error-failure-to-transfer
+  - Configuring a Proxy 
+     - Maven plugin uses a settings file where the configuration can be set. Its path is available in Eclipse at Window|Preferences|Maven|User Settings. If the file doesn't exist, create it and put on something like this:
+  - Force download of dependencies
+     - ```mvn dependency:purge-local-repository```
+
+
+```
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository/>
+  <interactiveMode/>
+  <usePluginRegistry/>
+  <offline/>
+  <pluginGroups/>
+  <servers/>
+  <mirrors/>
+  <proxies>
+    <proxy>
+      <id>myproxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>192.168.1.100</host>
+      <port>6666</port>
+      <username></username>
+      <password></password>
+      <nonProxyHosts>localhost|127.0.0.1</nonProxyHosts>
+    </proxy>
+  </proxies>
+  <profiles/>
+  <activeProfiles/>
+</settings>
+```
+
 
 ## Maven Standalone
 - For most purposes, we recommend using embedded maven in Eclipse.
