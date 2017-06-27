@@ -13,7 +13,7 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
 - Installing & Troubleshooting
   - [Java](#java)
   - [Eclipse](#eclipse)
-  - [Embedded Maven in Eclipse](#embedded-maven-in-eclipse)
+  - [Embedded Maven in Eclipse](#testing-eclipse-with-embedded-maven)
 - Taking First 5 Steps
   - [Eclipse](#first-5-steps-in-eclipse)
   - [Maven](#first-5-steps-in-maven)
