@@ -289,31 +289,31 @@ Coming Soon..
     - org.hamcrest.Matchers
     - org.hamcrest.CoreMatchers
 
-### Step 1 : Setting up an example.
-### Step 2 : Stubs.
-### Step 3 : Your first mock. 
-### Step 4 : Mockito Annotations - @Mock, @InjectMocks, @RunWith(MockitoJUnitRunner.class)
-### Step 5 : Mocking List interface
-### Next Steps
+- Step 1 : Setting up an example.
+- Step 2 : Using a Stubs - Disadvantages
+- Step 3 : Your first mock. 
+- Step 4 : Using Mockito Annotations - @Mock, @InjectMocks, @RunWith(MockitoJUnitRunner.class)
+- Step 5 : Mocking List interface
+- Next Steps
 
 ##  First 5 Steps in Spring
 
-### Step 1 : First Spring Example - Searching and Sorting - Setup
-### Step 2 : First Spring Example - Searching and Sorting - Refactoring
-### Step 3 : First Spring Example - Searching and Sorting - Using Spring
-### Step 4 : Important Spring Annotations - @Component, @Autowired
-### Step 5 : Spring Application Context - Container Managed Beans
-### Step 6 : Types of Dependency Injection
-### Next Steps
+- Step 1 : First Spring Example - Searching and Sorting - Setup
+- Step 2 : First Spring Example - Searching and Sorting - Refactoring
+- Step 3 : First Spring Example - Searching and Sorting - Using Spring
+- Step 4 : Important Spring Annotations - @Component, @Autowired
+- Step 5 : Spring Application Context - Container Managed Beans
+- Step 6 : Types of Dependency Injection
+- Next Steps
 
 ##  First 5 Steps in Spring Boot
 
-### Step 1 : Setup and Launch with Spring Initializr
-### Step 2 : Create a Simple REST Controller
-### Step 3 : Spring Boot vs Spring vs Spring MVC
-### Step 4 : Spring Boot Actuator
-### Step 5 : Embedded servlet containers : Switch to Jetty or Undertow
-### Next Steps
+- Step 1 : Setup and Launch with Spring Initializr
+- Step 2 : Create a Simple REST Controller
+- Step 3 : Spring Boot vs Spring vs Spring MVC
+- Step 4 : Spring Boot Actuator
+- Step 5 : Embedded servlet containers : Switch to Jetty or Undertow
+- Next Steps
 
 ##  First 5 Steps in Kotlin
 
@@ -323,20 +323,23 @@ Quotes from Andrey Breslav, Kotlin language designer
 
 > Kotlin is designed to be an industrial-strength object-oriented language, and a "better language" than Java, but still be fully interoperable with Java code, allowing companies to make a gradual migration from Java to Kotlin.
 
-### Step 1 : Introduction to Kotlin
-### Step 2 : First Kotlin Java Project and class
-### Step 3 : Basics - Variables in Kotlin
-### Step 4 : Functions in Kotlin
-### Step 5 : Kotlin Data Class
-### Next Steps
+- Step 1 : Introduction to Kotlin
+- Step 2 : First Kotlin Java Project and class
+- Step 3 : Basics - Variables in Kotlin
+- Step 4 : Functions in Kotlin
+- Step 5 : Kotlin Data Class
+- Next Steps
 
 ##  First 5 Steps in H2 in-memory database
 
-### Step 1 : Import an exising project using inmemory database
-### Step 2 : Understanding the JPA Project
-### Step 3 : Using in-memory database in Unit Tests
-### Step 4 : Using in-memory database to run actual application
-### Step 5 : Using H2 Console 
+- Step 1 : Import an exising project using inmemory database
+- Step 2 : Understanding the JPA Project
+- Step 3 : Using in-memory database in Unit Tests
+- Step 4 : Using in-memory database to run actual application
+- Step 5 : Using H2 Console 
+- Next Steps
+
+Notes
 - http://localhost:8080/h2-console
 - Use db url jdbc:h2:mem:testdb
-### Next Steps
+
