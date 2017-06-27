@@ -105,6 +105,8 @@ Eclipse is the most popular open source Java IDE.
 - Some instructions at https://wiki.eclipse.org/Eclipse/Installation#Troubleshooting
 
 ## Testing Eclipse with Embedded Maven
+
+Maven is one of the most popular Java build tools. Its is used to manage dependencies of java projects and build deployable units. We will use embedded maven in eclipse in our course. We will do the following things to test our embedded maven installation:
 - Create a new Eclipse workspace
 - Download a new Spring Boot project from http://start.spring.io
 - Import and run the Spring Boot Project
