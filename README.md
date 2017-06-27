@@ -6,19 +6,18 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
 - Setting up these examples
  - Video link - TODO
 - Languages/Tools
-  - Java
-  - Eclipse
-     - Embedded Maven
-  - Maven
-  - Kotlin
-  - Postman
-  - MySQL
-  - H2
+  - [Java](#java)
+  - [Eclipse](#eclipse)
+  - [Embedded Maven in Eclipse](#embedded-maven-in-eclipse)
+  - [Maven](#maven-standalone)
+  - [Kotlin](#kotlin)
+  - [H2](#h2-in-memory-database)
+  - MySQL [COMING SOON]
 - Frameworks
-  - Spring
-  - Spring Boot
-  - JUnit
-  - Mockito
+  - [Spring](#spring)
+  - [Spring Boot](#spring-boot)
+  - [JUnit](#junit)
+  - [Mockito](#Mockito)
 
 # Java
 - Most popular language
