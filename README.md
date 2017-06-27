@@ -232,9 +232,8 @@ Coming Soon..
 		- ${basedir}/src/test
 
 ### Step 2 : Import a Maven project
-  - We will this example - https://github.com/in28minutes/SpringMvcStepByStep
-  - Run basic maven commands
-    - mvn tomcat7:run
+  - We will create a simple Spring Boot project
+  - We will import it and run basic maven commands
 
 ### Step 3 : Basic Maven Commands
  - mvn --version
@@ -289,10 +288,11 @@ Coming Soon..
     - org.mockito.Mockito
     - org.hamcrest.Matchers
     - org.hamcrest.CoreMatchers
-### Step 1 : Setting up an example
+
+### Step 1 : Setting up an example.
 ### Step 2 : Stubs.
 ### Step 3 : Your first mock. 
-### Step 4 : Mockito Annotations. @Mock, @InjectMocks, @RunWith(MockitoJUnitRunner.class)
+### Step 4 : Mockito Annotations - @Mock, @InjectMocks, @RunWith(MockitoJUnitRunner.class)
 ### Step 5 : Mocking List interface
 ### Next Steps
 
