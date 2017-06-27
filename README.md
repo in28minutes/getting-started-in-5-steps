@@ -18,14 +18,14 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
   - [Kotlin](#kotlin)
   - MySQL [COMING SOON]
 - Taking First 5 Steps
-  - [Eclipse](#eclipse)
-  - [Maven](#maven-standalone)
-  - [Kotlin](#kotlin)
-  - [H2](#h2-in-memory-database)
-  - [Spring](#spring)
-  - [Spring Boot](#spring-boot)
-  - [JUnit](#junit)
-  - [Mockito](#mockito)
+  - [Eclipse](#first-5-steps-in-eclipse)
+  - [Maven](#first-5-steps-in-maven)
+  - [Spring](#first-5-steps-in-spring)
+  - [Spring Boot](#first-5-steps-in-spring-boot)
+  - [JUnit](#first-5-steps-in-junit)
+  - [Mockito](#first-5-steps-in-mockito)
+  - [Kotlin](#first-5-steps-in-kotlin)
+  - [H2](#first-5-steps-in-h2-in-memory-database)
 
 
 # Installation & Troubleshooting
