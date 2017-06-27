@@ -20,6 +20,10 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
   - JUnit
   - Mockito
 
+# Java
+- Most popular language
+- http://github.com/in28minutes/getting-started-in-5-steps#Java
+
 ## Prerequisites
 - None
 
@@ -132,7 +136,7 @@ Eclipse is the most popular open source Java IDE.
       - equals()
       - hashcode()
 
-# Maven
+# Embedded Maven in Eclipse
 
 ## Prerequisites
 
@@ -142,15 +146,23 @@ Eclipse is the most popular open source Java IDE.
 ## Installation
 - If you are a beginner, we recommended to use Maven embedded in Eclipse. If you have your feet firmly on ground, go to the section on standalone installation.
 
-## Check Embedded Maven in Eclipse
+## Check
 - Import a Maven Project into eclipse
   - We will this example - https://github.com/in28minutes/SpringMvcStepByStep
   - Run basic maven commands
 
 ## Troubleshooting Embedded Maven in Eclipse
 
+## First 5 Steps
+Refer First 5 Steps of Maven Standalone below.
 
-### Standalone installation
+# Maven Standalone
+- For most purposes, we recommend using embedded maven in Eclipse.
+
+## Prerequisites
+- Java
+
+## Installation
 1. Check if Java is installed properly. Type in the command “java –version” as shown in the screen. If it does not work, go to the trouble shooting section of Java or Reinstall Java.  
 ![Image](/images/java-version-command.png)
 
@@ -310,17 +322,21 @@ Coming Soon..
 
 # Kotlin
 
-Coming Soon..
+Quotes from Andrey Breslav, Kotlin language designer
+
+> The primary purpose of Project Kotlin is to create for developers a general-purpose language that can serve as a useful tool that is safe, concise, flexible, and 100 percent Java-compatible
+
+> Kotlin is designed to be an industrial-strength object-oriented language, and a "better language" than Java, but still be fully interoperable with Java code, allowing companies to make a gradual migration from Java to Kotlin.
 
 ## Prerequisites
 - Java
 - Eclipse
-  - Embedded Maven in Eclipse
 
 ## Installation
+Installing Kotlin Java Plugin - https://marketplace.eclipse.org/content/kotlin-plugin-eclipse
 
 ## First 5 Steps
-### Step 1 : Installing Kotlin Java Plugin - https://marketplace.eclipse.org/content/kotlin-plugin-eclipse
+### Step 1 : Introduction to Kotlin
 ### Step 2 : First Kotlin Java Project and class
 ### Step 3 : Basics - Variables in Kotlin
 ### Step 4 : Functions in Kotlin
