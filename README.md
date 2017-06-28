@@ -343,7 +343,12 @@ Coming Soon..
 
 ## First 5 Steps in Mockito
 
-- Visit Mockito Official Documentation - [Mockito Documentation] (http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html)
+Mockito is the most famous mocking framework in Java.
+
+- Git Repository - https://github.com/in28minutes/getting-started-in-5-steps
+- Pre-requisites 
+    - Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
+    - JUnit - https://www.youtube.com/watch?v=AN4NCnc4eZg
 - Easier Static Imports
   - Window > Preferences > Java > Editor > Content Assist > Favorites
     - org.junit.Assert
@@ -351,8 +356,10 @@ Coming Soon..
     - org.mockito.Mockito
     - org.hamcrest.Matchers
     - org.hamcrest.CoreMatchers
+- More information 
+   - Visit Mockito Official Documentation - [Mockito Documentation] (http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html)
 
-- Step 1 : Setting up an example.
+- Step 1 : Setting up an example using http://start.spring.io.
 - Step 2 : Using a Stubs - Disadvantages
 - Step 3 : Your first mock. 
 - Step 4 : Using Mockito Annotations - @Mock, @InjectMocks, @RunWith(MockitoJUnitRunner.class)

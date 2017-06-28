@@ -1,4 +1,4 @@
-package com.example.mockito;
+package com.in28minutes.mockito.mockitodemo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
