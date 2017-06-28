@@ -222,7 +222,7 @@ Coming Soon..
 
 ## First 5 Steps in Eclipse
 
-- Git Repository - https://github.com/in28minutes/getting-started-in-5-steps#first-5-steps-in-eclipse
+- Git Repository - https://github.com/in28minutes/getting-started-in-5-steps
 - Pre-requisites - Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 
 > If you are using mac, use Cmd instead of Ctrl. 
@@ -253,8 +253,34 @@ Coming Soon..
 
 ## First 5 Steps in Maven
 
-### Step 1 : Creating a Maven project
- - Create a java project with a class and unit test
+- Defining what Maven does is very difficult.
+
+- Every Day Developer does a lot of things
+   - Manages Dependencies - Web Layer (Spring MVC), Data Layer (JPA - Hibernate) etc..                  
+   - Build a jar or a war or an ear
+   - Run the application locally - Tomcat or Jetty
+   - Deploy to a T environment
+   - Add new dependencies to a project
+   - Run Unit Tests
+
+- Maven helps us do all these and more...
+   - Generate Projects
+   - Create Eclipse Workspace
+
+### Getting Started 
+- Git Repository - https://github.com/in28minutes/getting-started-in-5-steps
+- Pre-requisites - Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
+- We will use embedded eclipse in Maven
+
+### Step 1 : Creating and importing a Maven Project
+ - We will create a Spring Boot project using http://start.spring.io
+ - We will import it into Eclipse as a Maven Project
+
+### Step 2 : Understanding Project Object Model - pom.xml
+ - Naming a project
+ - Declaring Dependencies
+
+### Step 3 : Maven Build Life Cycle
  - run "mvn clean install" 
  - Build LifeCycle - Validate, Compile, Test, Package, Integration Test, Verify, Install, Deploy
  - Convention over Configuration - Pre defined folder structure
@@ -264,31 +290,24 @@ Coming Soon..
 	- Test Code
 		- ${basedir}/src/test
 
-### Step 2 : Import a Maven project
-  - We will create a simple Spring Boot project
-  - We will import it and run basic maven commands
-
-### Step 3 : Basic Maven Commands
- - mvn --version
- - mvn compile (compiles source files)
- - mvn test-compile (compiles test files) - one thing to observe is this also compiles source files
- - mvn clean - deletes target directory
- - mvn test - run unit tests
- - mvn package - creates the jar
-
 ### Step 4 : How does Maven Work?
  - Local Repository
  - Maven repository 
    - stores all the versions of all dependencies. JUnit 4.2,4.3,4.4
    - mvn install - copies the created jar to local maven repository - a temp folder on my machine where maven stores the files.
 
-### Step 5 : Advanced Maven Commands
+### Step 5 : Important Maven Commands
+ - mvn --version
+ - mvn compile (compiles source files)
+ - mvn test-compile (compiles test files) - one thing to observe is this also compiles source files
+ - mvn clean - deletes target directory
+ - mvn test - run unit tests
+ - mvn package - creates the jar
 - help:effective-settings
 - help:effective-pom
 - dependency:tree
 - dependency:sources
 - --debug
-- Maven Archetypes -> archetype:generate
 
 ### Next Steps
 
