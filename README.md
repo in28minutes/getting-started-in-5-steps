@@ -9,13 +9,13 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
 # Overview
 
 - Setting up these examples
- - Video link - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 - Installing & Troubleshooting
-  - [Overview](#overview) Video - https://www.youtube.com/watch?v=Ipt7J1MFWPo&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=1
-  - [Java](#java) Video - https://www.youtube.com/watch?v=9bdgxY841v0&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=2
-  - [Eclipse](#eclipse) Video - https://www.youtube.com/watch?v=-KV0QIqh2kA&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=3
-  - [Embedded Maven in Eclipse](#testing-eclipse-with-embedded-maven) Video - https://www.youtube.com/watch?v=g8Sw0UPPjKY&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=4
-  - [Troubleshooting Eclipse with Embedded Maven](#troubleshooting-eclipse-with-embedded-maven) Video - https://www.youtube.com/watch?v=ZZw8XNz5N-c&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=5
+  - [Overview](#overview)
+    - Video Playlist - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
+  - [Java](#java)
+  - [Eclipse](#eclipse)
+  - [Embedded Maven in Eclipse](#testing-eclipse-with-embedded-maven)
+  - [Troubleshooting Eclipse with Embedded Maven](#troubleshooting-eclipse-with-embedded-maven)
 - Taking First 5 Steps
   - [Eclipse](#first-5-steps-in-eclipse)
   - [Maven](#first-5-steps-in-maven)
@@ -33,7 +33,6 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
 
 ## Java
 - Most popular language
-- http://github.com/in28minutes/getting-started-in-5-steps#Java
 - Video - https://www.youtube.com/watch?v=9bdgxY841v0&list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3&index=2
 
 ### Prerequisites
@@ -172,7 +171,7 @@ Video - https://www.youtube.com/watch?v=ZZw8XNz5N-c&list=PLBBog2r6uMCSmMVTW_QmDL
 
 
 ## Maven Standalone
-- For most purposes, we recommend using embedded maven in Eclipse.
+- For most purposes, we recommend using embedded maven in Eclipse. Video - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 
 ### Prerequisites
 - Java
@@ -223,13 +222,14 @@ Coming Soon..
 
 ## First 5 Steps in Eclipse
 
-> If you are using mac, use Cmd instead of Ctrl. 
+- Git Repository - https://github.com/in28minutes/getting-started-in-5-steps#first-5-steps-in-eclipse
+- Pre-requisites - Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 
+> If you are using mac, use Cmd instead of Ctrl. 
 > In Windows, use Windows -> Preferences for Preferences.
 
 - Step 1 : Create a Java Project 
   - Create and run a Java class
-  - Create and run a JUnit test
 - Step 2 : Keyboard Shortcuts
   - Ctrl + Space
     - BigDecimal - Auto Suggestion
@@ -250,7 +250,6 @@ Coming Soon..
       - toString()
       - equals()
       - hashcode()
-
 
 ## First 5 Steps in Maven
 
@@ -377,4 +376,3 @@ Quotes from Andrey Breslav, Kotlin language designer
 Notes
 - http://localhost:8080/h2-console
 - Use db url jdbc:h2:mem:testdb
-
