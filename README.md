@@ -270,7 +270,7 @@ Coming Soon..
 ### Getting Started 
 - Git Repository - https://github.com/in28minutes/getting-started-in-5-steps
 - Pre-requisites - Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
-- We will use embedded eclipse in Maven
+- We will use embedded maven in Eclipse
 
 ### Step 1 : Creating and importing a Maven Project
  - We will create a Spring Boot project using http://start.spring.io
