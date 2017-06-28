@@ -313,6 +313,10 @@ Coming Soon..
 
 ## First 5 Steps in JUnit
 
+- Git Repository - https://github.com/in28minutes/getting-started-in-5-steps
+- Pre-requisites - Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
+- We will use embedded maven in Eclipse
+
 ### Step 1 : What is JUnit and Unit Testing?
  - What is JUnit?
  - What is Unit Testing?
