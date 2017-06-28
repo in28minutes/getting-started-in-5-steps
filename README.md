@@ -312,22 +312,29 @@ Coming Soon..
 ### Next Steps
 
 ## First 5 Steps in JUnit
-### Step 1 : First JUnit Project and Green Bar
+
+### Step 1 : What is JUnit and Unit Testing?
+ - What is JUnit?
+ - What is Unit Testing?
+ - Advantages of Unit Testing
+
+### Step 2 : First JUnit Project and Green Bar
  - What is JUnit?
  - First Project with JUnit
  - First JUnit Class
  - No Failure is Success
-### Step 2 : First Code and First Unit Test
  - MyMath class with sum method
+
+### Step 3 : First Code and First Unit Test
  - Unit test for the sum method
-### Step 3 : Other assert methods
+
+### Step 4 : Other assert methods
  - assertTrue and assertFalse methods
-### Step 4 : Important annotations
+
+### Step 5 : Important annotations
   - @Before @After annotations
   - @BeforeClass @AfterClass annotations
-### Step 5 : Advantages of Unit Testing and How to make best use of JUnit?
-- JUnit tests are automated vs Manual Testing
-- Run in Continuous Integration - Jenkins
+
 ### Next Steps
 
 ## First 5 Steps in Mockito
