@@ -13,16 +13,14 @@ public class SomeSearchImpl {
 	}
 
 	public int binarySearch(int[] numbers, int valueToSearchFor) {
-
 		// Sort the values
 		System.out.println(sortAlgorithm);
-		
+
 		int[] sortedNumbers = sortAlgorithm.sort(numbers);
 
 		// Pick the right one
 
-		// Return value
+		// Return index
 		return 5;
 	}
 }
-

@@ -368,13 +368,13 @@ Mockito is the most famous mocking framework in Java.
 
 ##  First 5 Steps in Spring
 
-- Step 1 : First Spring Example - Searching and Sorting - Setup
-- Step 2 : First Spring Example - Searching and Sorting - Refactoring
-- Step 3 : First Spring Example - Searching and Sorting - Using Spring
-- Step 4 : Important Spring Annotations - @Component, @Autowired
-- Step 5 : Spring Application Context - Container Managed Beans
-- Step 6 : Types of Dependency Injection
-- Next Steps
+- Step 1 : Setting up a Spring Project using htttp://start.spring.io
+- Step 2 : Understanding Tight Coupling using the Binary Search Algorithm Example
+- Step 3 : Making the Binary Search Algorithm Example Loosely Coupled
+- Step 4 : Using Spring to Manage Dependencies - @Component, @Autowired
+- Step 5 : What is happening in the background?
+- Step 6 : Dynamic auto wiring and Troubleshooting - @Primary
+- Step 7 : Constructor and Setter Injection
 
 ##  First 5 Steps in Spring Boot
 

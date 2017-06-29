@@ -15,6 +15,7 @@ public class SpringDemoApplication {
 		// SomeSearchImpl searchImpl = new SomeSearchImpl(sortAlgorithm);
 
 		ApplicationContext context = SpringApplication.run(SpringDemoApplication.class, args);
+
 		SomeSearchImpl searchImpl = context.getBean(SomeSearchImpl.class);
 
 		searchImpl.binarySearch(new int[] { 1, 3, 2 }, 5);
