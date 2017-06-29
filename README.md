@@ -375,6 +375,9 @@ Mockito is the most famous mocking framework in Java.
 - Step 5 : What is happening in the background?
 - Step 6 : Dynamic auto wiring and Troubleshooting - @Primary
 - Step 7 : Constructor and Setter Injection
+- Step 8 : Why is Spring Popular?
+- Step 9 : Spring Modules
+- Step 10 : Spring Projects
 
 ##  First 5 Steps in Spring Boot
 
