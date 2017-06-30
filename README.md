@@ -381,12 +381,17 @@ Mockito is the most famous mocking framework in Java.
 
 ##  First 5 Steps in Spring Boot
 
-- Step 1 : Setup and Launch with Spring Initializr
-- Step 2 : Create a Simple REST Controller
-- Step 3 : Spring Boot vs Spring vs Spring MVC
-- Step 4 : Spring Boot Actuator
-- Step 5 : Embedded servlet containers : Switch to Jetty or Undertow
-- Next Steps
+- Step 1 : Introduction to Spring Boot - Goals and Important Features
+- Step 2 : Developing Spring Applications before Spring Boot
+- Step 3 : Using Spring Initializr to create a Spring Boot Application
+- Step 4 : Creating a Simple REST Controller
+- Step 5 : What is Spring Boot Auto Configuration?
+- Step 6 : Spring Boot vs Spring vs Spring MVC
+- Step 7 : Spring Boot Starter Projects - Starter Web and Starter JPA
+- Step 8 : Overview of different Spring Boot Starter Projects
+- Step 9 : Spring Boot Actuator
+- Step 10 : Spring Boot Developer Tools
+- Spring Boot - Conclusion
 
 ##  First 5 Steps in Kotlin
 
