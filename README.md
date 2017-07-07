@@ -24,7 +24,7 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
   - [JUnit](#first-5-steps-in-junit)
   - [Mockito](#first-5-steps-in-mockito)
   - [Kotlin](#first-5-steps-in-kotlin)
-  - [H2](#first-5-steps-in-h2-in-memory-database)
+  - [JPA](#first-5-steps-in-jpa-with-h2-in-memory-database)
 
 
 # Installation & Troubleshooting
@@ -366,7 +366,7 @@ Mockito is the most famous mocking framework in Java.
 - Step 5 : Mocking List interface
 - Next Steps
 
-##  First 5 Steps in Spring
+##  First 10 Steps in Spring
 
 - Step 1 : Setting up a Spring Project using htttp://start.spring.io
 - Step 2 : Understanding Tight Coupling using the Binary Search Algorithm Example
@@ -379,7 +379,7 @@ Mockito is the most famous mocking framework in Java.
 - Step 9 : Spring Projects
 - Step 10 : Why is Spring Popular?
 
-##  First 5 Steps in Spring Boot
+##  First 10 Steps in Spring Boot
 
 - Step 1 : Introduction to Spring Boot - Goals and Important Features
 - Step 2 : Developing Spring Applications before Spring Boot
@@ -409,13 +409,18 @@ Quotes from Andrey Breslav, Kotlin language designer
 - Step 5 : Kotlin Data Class
 - Next Steps
 
-##  First 5 Steps in H2 in-memory database
+##  First 10 Steps in JPA with H2 in-memory database
 
-- Step 1 : Import an exising project using inmemory database
-- Step 2 : Understanding the JPA Project
-- Step 3 : Using in-memory database in Unit Tests
-- Step 4 : Using in-memory database to run actual application
-- Step 5 : Using H2 Console 
+- Step 1 : Object Relational Impedence Mismatch - Understanding the problem that JPA solves
+- Step 2 : World before JPA - JDBC, Spring JDBC and myBatis
+- Step 3 : Introduction to JPA
+- Step 4 : Creating a JPA Project using Spring Initializr
+- Step 5 : Defining a JPA Entity - User
+- Step 6 : Defining a Service to manage the Entity - UserService and EntityManager
+- Step 7 : Using a Command Line Runner to save the User to database.
+- Step 8 : Magic of Spring Boot and In Memory Database H2
+- Step 9 : Introduction to Spring Data JPA
+- Step 10 : More JPA Repository : findById and findAll
 - Next Steps
 
 Notes

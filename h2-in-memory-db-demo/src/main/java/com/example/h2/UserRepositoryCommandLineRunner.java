@@ -6,29 +6,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-@Component
-public class UserCommandLineRunner implements CommandLineRunner {
+import com.example.h2.user.User;
+import com.example.h2.user.UserRepository;
 
-	private static final Logger log = LoggerFactory.getLogger(UserCommandLineRunner.class);
+@Component
+public class UserRepositoryCommandLineRunner implements CommandLineRunner {
+
+	private static final Logger log = LoggerFactory.getLogger(UserRepositoryCommandLineRunner.class);
 
 	@Autowired
-	private UserRepository repository;
+	private UserRepository userRepository;
 
 	@Override
 	public void run(String... args) {
-		// save a couple of customers
-		repository.save(new User("Ranga", "Admin"));
-		repository.save(new User("Ravi", "User"));
-		repository.save(new User("Satish", "Admin"));
-		repository.save(new User("Raghu", "User"));
-
+		User harry = new User("Harry", "Admin");
+		userRepository.save(harry);
 		log.info("-------------------------------");
 		log.info("Finding all users");
 		log.info("-------------------------------");
-		for (User user : repository.findAll()) {
+		for (User user : userRepository.findAll()) {
 			log.info(user.toString());
 		}
-
 	}
 
 }

@@ -1,11 +1,13 @@
-package com.example.h2;
+package com.example.h2.user;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQuery(query = "select u from User u", name = "query_find_all_users")
 public class User {
 
 	@Id
