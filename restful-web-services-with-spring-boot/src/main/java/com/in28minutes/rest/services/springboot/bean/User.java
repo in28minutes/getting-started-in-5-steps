@@ -2,11 +2,17 @@ package com.in28minutes.rest.services.springboot.bean;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@Entity
 public class User {
 
+	@Id
+	@GeneratedValue
 	private Integer id;
 
 	@NotNull

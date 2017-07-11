@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.in28minutes.rest.services.springboot.bean.User;
 
 @Service
-public class UserService {
+public class UserService implements UserDaoService {
 
 	private static List<User> users = new ArrayList<User>();
 

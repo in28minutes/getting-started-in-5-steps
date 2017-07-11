@@ -57,10 +57,10 @@ public class UserControllerIT {
 
 	@Test
 	public void retrieveUser() throws Exception {
-		String expected = "{id:1,name:Alice}";
+		String expected = "{name:Alice}";
 
 		ResponseEntity<String> response = template.getForEntity("/users/1", String.class);
-
+		System.out.println(response.getBody());
 		JSONAssert.assertEquals(expected, response.getBody(), false);
 	}
 
