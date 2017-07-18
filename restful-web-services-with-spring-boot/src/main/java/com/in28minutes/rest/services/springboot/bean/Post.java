@@ -17,7 +17,7 @@ public class Post {
 
 	private String description;
 
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JsonIgnore
 	private User user;
 

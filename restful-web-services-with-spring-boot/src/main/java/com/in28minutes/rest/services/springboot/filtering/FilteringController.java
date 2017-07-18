@@ -12,7 +12,7 @@ class SomeBean {
 
 	@JsonIgnore
 	String value2;
-	
+
 	String value3;
 
 	public SomeBean(String value1, String value2, String value3) {

@@ -55,8 +55,8 @@ public class UserController {
 		if (user == null) {
 			return ResponseEntity.noContent().build();
 		}
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(user.getId()).toUri();
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(user.getId())
+				.toUri();
 		return ResponseEntity.created(location).build();
 	}
 }

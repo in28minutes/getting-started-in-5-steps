@@ -37,7 +37,7 @@ public class HelloWorldController {
 			@RequestHeader(value = "Accept-Language", required = false) Locale locale) {
 		return messageSource.getMessage("helloWorld.message", null, locale);
 	}
-	
+
 	@GetMapping(path = "/hello-world/exception")
 	public User errorService() {
 		throw new RuntimeException("Some Exception Occured");

@@ -7,5 +7,5 @@ import com.in28minutes.rest.services.springboot.bean.Post;
 import com.in28minutes.rest.services.springboot.bean.User;
 
 @Repository
-public interface PostRepository extends JpaRepository<Post, Integer> {	
+public interface PostRepository extends JpaRepository<Post, Integer> {
 }

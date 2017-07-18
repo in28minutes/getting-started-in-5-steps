@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.in28minutes.rest.services.springboot.bean.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {	
+public interface UserRepository extends JpaRepository<User, Integer> {
 }

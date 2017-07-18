@@ -38,7 +38,7 @@ public class UserJPAController {
 
 	@Autowired
 	private UserRepository userService;
-	
+
 	@Autowired
 	private PostRepository postService;
 
@@ -79,31 +79,30 @@ public class UserJPAController {
 				.toUri();
 		return ResponseEntity.created(location).build();
 	}
-	
-	
+
 	@GetMapping("/jpa/users/{id}/posts")
 	public List<Post> retrieveAllPosts(@PathVariable int id) {
 		Optional<User> user = userService.findById(id);
 		if (!user.isPresent()) {
 			throw new UserNotFoundException("User Not Found");
 		}
-		
+
 		return user.get().getPosts();
 	}
 
 	@PostMapping("/jpa/users/{id}/posts")
-	ResponseEntity<?> addPost(@PathVariable int id,  @RequestBody Post postToSave) {
-		
+	ResponseEntity<?> addPost(@PathVariable int id, @RequestBody Post postToSave) {
+
 		Optional<User> user = userService.findById(id);
-		
+
 		if (!user.isPresent()) {
 			throw new UserNotFoundException("User Not Found");
 		}
-		
+
 		postToSave.setUser(user.get());
-		
+
 		postService.save(postToSave);
-		
+
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(postToSave.getId())
 				.toUri();
 		return ResponseEntity.created(location).build();

@@ -20,8 +20,8 @@ public class HelloWorldControllerIT {
 
 	@Autowired
 	private TestRestTemplate template;
-	
-	//@LocalServerPort - Not needed any more :)
+
+	// @LocalServerPort - Not needed any more :)
 
 	@Test
 	public void helloWorld() throws Exception {

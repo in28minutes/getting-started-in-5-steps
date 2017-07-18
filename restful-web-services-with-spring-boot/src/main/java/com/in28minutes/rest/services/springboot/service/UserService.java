@@ -26,7 +26,7 @@ public class UserService implements UserDaoService {
 	}
 
 	public User save(User user) {
-		if(user.getId()==null) {
+		if (user.getId() == null) {
 			user.setId(++userCount);
 		}
 		users.add(user);
