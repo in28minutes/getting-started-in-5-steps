@@ -1,4 +1,5 @@
 # Getting Started in 5 Steps
+
 Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spring, Spring Boot &amp; Kotlin in 5 easy steps
 
 # Begin with End in Mind
@@ -16,16 +17,15 @@ Learn to install and get started with Java, Eclipse, Maven, JUnit, Mockito, Spri
   - [Eclipse](#eclipse)
   - [Embedded Maven in Eclipse](#testing-eclipse-with-embedded-maven)
   - [Troubleshooting Eclipse with Embedded Maven](#troubleshooting-eclipse-with-embedded-maven)
-- Taking First 5 Steps
+- Taking First Steps
   - [Eclipse](eclipse-in-5-steps)
-  - [Eclipse](eclipse-in-5-steps/readme.md)
-  - [Maven](#first-5-steps-in-maven)
-  - [Spring](#first-5-steps-in-spring)
-  - [Spring Boot](#first-5-steps-in-spring-boot)
-  - [JUnit](#first-5-steps-in-junit)
-  - [Mockito](#first-5-steps-in-mockito)
-  - [Kotlin](#first-5-steps-in-kotlin)
-  - [JPA](#first-5-steps-in-jpa-with-h2-in-memory-database)
+  - [Maven](maven-in-5-steps)
+  - [Spring](spring-in-10-steps)
+  - [Spring Boot](springboot-in-10-steps)
+  - [JUnit](junit-in-5-steps)
+  - [Mockito](mockito-in-5-steps)
+  - [Kotlin](kotlin-demo)
+  - [JPA](jpa-in-10-steps)
 
 
 # Installation & Troubleshooting
@@ -218,5 +218,3 @@ Coming Soon..
 ### Check
 
 ### Trouble Shooting
-
-# First 5 Steps
