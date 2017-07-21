@@ -1,5 +1,0 @@
-INSERT INTO USER VALUES(1,sysdate(),'Adam');
-INSERT INTO USER VALUES(2,sysdate(),'Eve');
-
-INSERT INTO POST VALUES(1001,'My First Post',1);
-INSERT INTO POST VALUES(1002,'My Second Post',1);
