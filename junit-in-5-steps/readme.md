@@ -1,3 +1,30 @@
+## First 5 Steps in JUnit
+
+- Git Repository - https://github.com/in28minutes/getting-started-in-5-steps
+- Pre-requisites - Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
+- We will use embedded maven in Eclipse
+
+### Step 1 : What is JUnit and Unit Testing?
+ - What is JUnit?
+ - What is Unit Testing?
+ - Advantages of Unit Testing
+
+### Step 2 : First JUnit Project and Green Bar
+ - What is JUnit?
+ - First Project with JUnit
+ - First JUnit Class
+ - No Failure is Success
+ - MyMath class with sum method
+
+### Step 3 : First Code and First Unit Test
+ - Unit test for the sum method
+
+### Step 4 : Other assert methods
+ - assertTrue and assertFalse methods
+
+### Step 5 : Important annotations
+  - @Before @After annotations
+  - @BeforeClass @AfterClass annotations
 
 ## Complete Code Example
 

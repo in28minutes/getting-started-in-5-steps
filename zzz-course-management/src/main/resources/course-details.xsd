@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://in28minutes.com/courses"
+	xmlns:tns="http://in28minutes.com/courses" elementFormDefault="qualified">
+	<element name="GetCourseDetailsRequest">
+		<!-- <id>10</id> -->
+		<complexType>
+			<sequence>
+				<element name="id" maxOccurs="1" type="integer" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="GetCourseDetailsResponse">
+		<complexType>
+			<sequence>
+				<element name="CourseDetails" type="tns:CourseDetails" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="GetAllCourseDetailsRequest">
+		<complexType></complexType>
+	</element>
+	<element name="GetAllCourseDetailsResponse">
+		<complexType>
+			<sequence>
+				<element name="CourseDetails" type="tns:CourseDetails"
+					maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="CourseDetails">
+		<sequence>
+			<element name="id" type="integer" />
+			<element name="name" type="string" />
+			<element name="description" type="string" />
+		</sequence>
+	</complexType>
+</schema>

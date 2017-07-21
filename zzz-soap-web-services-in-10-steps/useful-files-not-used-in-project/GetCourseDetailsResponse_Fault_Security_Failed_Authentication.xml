@@ -1,0 +1,9 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <SOAP-ENV:Fault>
+            <faultcode>SOAP-ENV:Client</faultcode>
+            <faultstring xml:lang="en">com.sun.xml.wss.impl.WssSoapFaultException: Authentication of Username Password Token Failed; nested exception is com.sun.xml.wss.XWSSecurityException: com.sun.xml.wss.impl.WssSoapFaultException: Authentication of Username Password Token Failed</faultstring>
+        </SOAP-ENV:Fault>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
