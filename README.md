@@ -206,28 +206,64 @@ Download Apache Maven from Maven official website, https://maven.apache.org. Exa
 * Run mvn --version to verify that it is correctly installed.  
 ![Image](/images/maven-check-installation.png)
 
-## MySql
+## Installing and Setting Up MySQL
 
-- https://dev.mysql.com/doc/en/installing.htm
+- Install MySQL https://dev.mysql.com/doc/en/installing.html
+  - More details : http://www.mysqltutorial.org/install-mysql/
+- Startup the Server (as a service)
+- Go to command prompt (or terminal)
+   - Execute following commands to create a database and a user
 
-### Installing MySQL on Microsoft Windows
-- http://dev.mysql.com/downloads/installer/
-- Choose the installation which is more than 300 MB in Size.
-- Bottom of the page, click Download. 
- Launch MySQL Workbench application from the Program Files > MySQL > MySQL Workbench 5.2 . The newer version of MySQL Workbench is also relevant.
+```
+mysql --user=user_name --password db_name
+create database todo_example;
+create user 'todouser'@'localhost' identified by 'YOUR_PASSWORD';
+grant all on todo_example.* to 'todouser'@'localhost';
+```
 
+- Execute following sql queries to create the table and insert the data
 
+Table
+```sql
+create table todo 
+(id integer not null, 
+desc varchar(255), 
+is_done boolean not null, 
+target_date timestamp, 
+user varchar(255), 
+primary key (id));
+```
 
+Data
+```sql
+INSERT INTO TODO
+VALUES(10001, 'Learn Spring Boot', false, sysdate(),'in28Minutes');
 
-### Installing MySQL on OS X
+INSERT INTO TODO
+VALUES(10002, 'Learn RESTful Web Services', false, sysdate(),'in28Minutes');
 
+INSERT INTO TODO
+VALUES(10003, 'Learn SOAP Web Services', false, sysdate(),'in28Minutes');
+```
 
+## Code changes to connect to MySQL
+- Add dependency to pom.xml (and remove H2 dependency)
+```xml
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+</dependency>
+```
+- Configure application.properties
 
-### Prerequisites
-- None
+```properties
+spring.jpa.hibernate.ddl-auto=none
+spring.datasource.url=jdbc:mysql://localhost:3306/todo_example
+spring.datasource.username=todouser
+spring.datasource.password=YOUR_PASSWORD
+```
 
-### Installing
-
-### Check
+- Restart and You are ready!
 
 ### Trouble Shooting
+- https://dev.mysql.com/doc/refman/en/problems.html
