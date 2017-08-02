@@ -208,7 +208,20 @@ Download Apache Maven from Maven official website, https://maven.apache.org. Exa
 
 ## MySql
 
-Coming Soon..
+- https://dev.mysql.com/doc/en/installing.htm
+
+### Installing MySQL on Microsoft Windows
+- http://dev.mysql.com/downloads/installer/
+- Choose the installation which is more than 300 MB in Size.
+- Bottom of the page, click Download. 
+ Launch MySQL Workbench application from the Program Files > MySQL > MySQL Workbench 5.2 . The newer version of MySQL Workbench is also relevant.
+
+
+
+
+### Installing MySQL on OS X
+
+
 
 ### Prerequisites
 - None
