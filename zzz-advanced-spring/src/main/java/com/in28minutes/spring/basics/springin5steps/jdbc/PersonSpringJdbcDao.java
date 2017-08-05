@@ -20,9 +20,9 @@ public class PersonSpringJdbcDao {
 	class PersonMapper implements RowMapper<Person> {
 		@Override
 		public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
-			Person todo = new Person(rs.getInt("id"), rs.getString("name"), rs.getString("location"),
+			Person person = new Person(rs.getInt("id"), rs.getString("name"), rs.getString("location"),
 					rs.getTimestamp("birth_date"));
-			return todo;
+			return person;
 		}
 	}
 
