@@ -46,26 +46,126 @@
                 <!-- Slides are separated by three dashes (quick 'n dirty regular expression) -->
                 <section data-markdown data-separator="---">
                     <script type="text/template">
-# Spring Boot Master Class
-![](images/RangaKaranam.png)
+# Spring 5.0
+# Master Class
 ---
-![](images/CourseOverview_SpringBootMasterClass_Sections.png)
+![](images/CourseOverview_SpringMasterClass_Sections.png)
 ---
-![](images/CourseOverview_SpringBootMasterClass_Sections.png)
+![](images/CourseOverview_SpringIn10Steps.png)
+---
+![](images/CourseOverview_SpringMasterClass_SpringInDepth.png)
+---
+![](images/CourseOverview_BasicWebApplicaitonIn15Steps.png)
 ---
 ![](images/CourseOverview_SpringBootIn10Steps.png)
 ---
-![](images/CourseOverview_SpringBoot_WebApplication.png)
+![](images/CourseOverview_SpringMasterClass_SpringAOP.png)
+---
+![](images/CourseOverview_SpringJDBCAndJPAIn20Steps.png)
+---
+![](images/CourseOverview_EclipseIn5Steps.png)
+---
+![](images/CourseOverview_MavenIn5Steps.png)
 ---
 ![](images/JUnitIn5Steps_CourseOverview.png)
 ---
 ![](images/MockitoIn5Steps_CourseOverview.png)
 ---
-![](images/CourseOverview_SpringBoot_Advanced.png)
+![](images/JavaEETypicalArchitecture.png)
 ---
-![](images/CourseOverview_JPAIn10Steps.png)
+## Dependencies
+```java
+@Component
+public class TodoController {
+
+  @Autowired
+  TodoBusinessService businessService;
+```
 ---
-![](images/CourseOverview_SpringIn10Steps.png)
+## Dependencies
+```java
+@Component
+public class TodoBusinessService {
+
+  @Autowired
+  TodoDataService dataService;
+```
+---
+## Dependencies
+```java
+@Component
+public class TodoDataService {
+
+  @Autowired
+  JdbcTemplate template;
+```
+---
+## Bean Scope
+
+Default - ```singleton```
+- ```singleton``` - One instance per Spring Context
+- ```prototype``` - New bean whenever requested
+- ```request``` - One bean per HTTP request.
+- ```session``` - One bean per HTTP session.
+---
+## CDI
+- Java EE Dependency Injection Standard (JSR-330)
+- Spring Supports most annotations
+  - @Inject (@Autowired)
+  - @Named (@Component & @Qualifier)
+  - @Singleton (Defines a scope of Singleton)
+---
+## Component Annotations
+- @Component - Generic Component
+- @Repository - encapsulating storage, retrieval, and search behavior typically from a relational database
+- @Service - Business Service Facade
+- @Controller - Controller in MVC pattern
+---
+![](images/JavaEETypicalArchitecture.png)
+---
+## Disambiguation
+- IOC Container
+- Application Context
+- Bean Factory
+---
+```java
+@RestController
+public class WelcomeController {
+
+    private WelcomeService service = new WelcomeService();
+
+  @RequestMapping("/welcome")
+  public String welcome() {
+    return service.retrieveWelcomeMessage();
+  }
+}
+```
+---
+## With Spring
+```java
+@Component
+public class WelcomeService {
+    //Bla Bla Bla
+}
+
+@RestController
+public class WelcomeController {
+
+    @Autowired
+    private WelcomeService service;
+
+  @RequestMapping("/welcome")
+  public String welcome() {
+    return service.retrieveWelcomeMessage();
+  }
+}
+```
+---
+## Application Context
+- Bean Factory++
+  - Spring’s AOP features
+  - I18n capabilities
+  - WebApplicationContext for web applications etc
 ---
 ![](images/In28Minutes-FocusAreas.png)
 ---
