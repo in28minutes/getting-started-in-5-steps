@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,7 +13,6 @@ import javax.persistence.ManyToMany;
 import javax.persistence.NamedAttributeNode;
 import javax.persistence.NamedEntityGraph;
 import javax.persistence.NamedQuery;
-import javax.persistence.NamedSubgraph;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -23,8 +23,9 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Table(name = "Course")
 @NamedQuery(query = "select c from Course c", name = "QUERY_ALL_COURSES")
 @NamedEntityGraph(name = "graph.CourseAndStudents", 
-attributeNodes = @NamedAttributeNode(value = "students"/*, subgraph = "students"),*/) 
+attributeNodes = @NamedAttributeNode(value = "students"/*, subgraph = "students"),*/)
 /*subgraphs = @NamedSubgraph(name = "students", attributeNodes = @NamedAttributeNode("passport"))*/)
+@Cacheable
 public class Course {
 
 	public Course() {

@@ -18,7 +18,10 @@ import javax.persistence.MapKeyColumn;
 import javax.persistence.MapKeyEnumerated;
 import javax.persistence.OneToOne;
 
+import org.hibernate.annotations.SQLDelete;
+
 @Entity
+@SQLDelete(sql = "UPDATE student SET state = 'DELETED' WHERE id = ?")
 public class Student {
 
 	private Student() {

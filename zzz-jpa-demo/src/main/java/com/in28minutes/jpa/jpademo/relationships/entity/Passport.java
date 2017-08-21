@@ -5,12 +5,17 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.annotations.Where;
 
 @Entity
+@Where(clause = "1=1")
 public class Passport {
-	
-	protected Passport() {}
-	
+
+	protected Passport() {
+	}
+
 	public Passport(String number) {
 		super();
 		this.number = number;
@@ -19,7 +24,8 @@ public class Passport {
 	@Id
 	@GeneratedValue
 	protected Long id;
-	
+
+	@NotNull
 	protected String number;
 
 	// Inverse Relationship
@@ -27,7 +33,7 @@ public class Passport {
 	// Column will not be created in the table
 	// Try removing mappedBy = "passport" => You will see a student_id column
 	// will be created in passport
-	//@OneToOne
+	// @OneToOne
 	@OneToOne(fetch = FetchType.LAZY, mappedBy = "passport")
 	protected Student student;
 
@@ -50,6 +56,4 @@ public class Passport {
 	public void setStudent(Student student) {
 		this.student = student;
 	}
-
-	
 }
