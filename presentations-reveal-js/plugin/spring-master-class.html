@@ -46,73 +46,130 @@
                 <!-- Slides are separated by three dashes (quick 'n dirty regular expression) -->
                 <section data-markdown data-separator="---">
                     <script type="text/template">
-# Hiberate & JPA
-# With Spring Boot
+# Spring 5.0
+# Master Class
 ---
-![](images/CourseOverview_JPAAndHibernateWithSpringBoot_Sections.png)
----
-![](images/CourseOverview_SpringJDBCAndJPAIn20Steps.png)
----
-![](images/CourseOverview_JPAInDepth_85Steps.png)
----
-![](images/CourseOverview_SpringBootIn10Steps.png)
+![](images/CourseOverview_SpringMasterClass_Sections.png)
 ---
 ![](images/CourseOverview_SpringIn10Steps.png)
 ---
+![](images/CourseOverview_SpringMasterClass_SpringInDepth.png)
+---
+![](images/CourseOverview_BasicWebApplicaitonIn15Steps.png)
+---
+![](images/CourseOverview_SpringBootIn10Steps.png)
+---
+![](images/CourseOverview_SpringMasterClass_SpringAOP.png)
+---
+![](images/CourseOverview_SpringJDBCAndJPAIn20Steps.png)
+---
+![](images/CourseOverview_EclipseIn5Steps.png)
+---
+![](images/CourseOverview_MavenIn5Steps.png)
+---
 ![](images/JUnitIn5Steps_CourseOverview.png)
 ---
-# Caching with JPA and Hibernate
+![](images/MockitoIn5Steps_CourseOverview.png)
 ---
 ![](images/JavaEETypicalArchitecture.png)
 ---
-![](images/HibernateCaching.png)
+## Dependencies
+```java
+@Component
+public class TodoController {
+
+  @Autowired
+  TodoBusinessService businessService;
+```
 ---
-![](images/HibernateCaching-FirstAndSecondLevels.png)
+## Dependencies
+```java
+@Component
+public class TodoBusinessService {
+
+  @Autowired
+  TodoDataService dataService;
+```
 ---
-![](images/WebApplicationLayers.png)
+## Dependencies
+```java
+@Component
+public class TodoDataService {
+
+  @Autowired
+  JdbcTemplate template;
+```
 ---
-![](Web_Services_Application_Layers.png)
+## Bean Scope
+
+Default - ```singleton```
+- ```singleton``` - One instance per Spring Context
+- ```prototype``` - New bean whenever requested
+- ```request``` - One bean per HTTP request.
+- ```session``` - One bean per HTTP session.
 ---
-## When do you use JPA? 
-- SQL Database
-- Static Domain Model 
-- Mostly CRUD 
-- Mostly Simple Queries/Mappings
+## CDI
+- Java EE Dependency Injection Standard (JSR-330)
+- Spring Supports most annotations
+  - @Inject (@Autowired)
+  - @Named (@Component & @Qualifier)
+  - @Singleton (Defines a scope of Singleton)
 ---
-# Performance Tuning
+## Component Annotations
+- @Component - Generic Component
+- @Repository - encapsulating storage, retrieval, and search behavior typically from a relational database
+- @Service - Business Service Facade
+- @Controller - Controller in MVC pattern
 ---
-## Zero Performance Tuning without Measuring
-- Enable and Monitor stats in atleast one environment.
+![](images/JavaEETypicalArchitecture.png)
 ---
-### Donald Knuth
-> We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil.
+## Disambiguation
+- IOC Container
+- Application Context
+- Bean Factory
 ---
-## Indexes
-- Add the right indexes on the database 
-- Execution Plan
+```java
+@RestController
+public class WelcomeController {
+
+    private WelcomeService service = new WelcomeService();
+
+  @RequestMapping("/welcome")
+  public String welcome() {
+    return service.retrieveWelcomeMessage();
+  }
+}
+```
 ---
-## Use Appropriate Caching
-- First Level Caching
-- Second Level Caching
-- Distributed Cache
-- Be careful about the size of First Level Cache
+## With Spring
+```java
+@Component
+public class WelcomeService {
+    //Bla Bla Bla
+}
+
+@RestController
+public class WelcomeController {
+
+    @Autowired
+    private WelcomeService service;
+
+  @RequestMapping("/welcome")
+  public String welcome() {
+    return service.retrieveWelcomeMessage();
+  }
+}
+```
 ---
-## Eager vs Lazy Fetch 
-- Use Lazy fetching mostly
-- Remember that all mapping *ToOne (@ManyToOne and @OneToOne) are EAGER by default.
----
-## Avoid N+1
-- Entity Graph & Named Entity Graphs & Dynamic Entity Graphs
-- Join Fetch Clause
----
-## Use Pagination
----
-## Batch Updates
+## Application Context
+- Bean Factory++
+  - Spring’s AOP features
+  - I18n capabilities
+  - WebApplicationContext for web applications etc
 ---
 ![](images/In28Minutes-FocusAreas.png)
 ---
 ![](images/In28MinutesCourseRoadMap-May2017.png)
-
                     </script>
                 </section>
 
