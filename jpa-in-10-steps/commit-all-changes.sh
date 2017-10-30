@@ -1,0 +1,1 @@
+git add *; git commit -m "I'm too lazy to put in a comment"; git push;

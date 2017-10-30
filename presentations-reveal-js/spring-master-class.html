@@ -71,27 +71,106 @@
 ---
 ![](images/MockitoIn5Steps_CourseOverview.png)
 ---
+# What is Spring?
+---
+## Spring is a 
+## Dependency Injection 
+## Framework!
+---
+# What is Dependecy Injection?
+---
+# What is Dependecy?
+---
 ![](images/JavaEETypicalArchitecture.png)
 ---
-## Dependencies
+## Dependency
 ```java
-@Component
-public class TodoController {
+public class ComplexBusinessService {
 
-  @Autowired
-  TodoBusinessService businessService;
+   SortAlgorithm sortAlgorithm;
 ```
 ---
-## Dependencies
-```java
-@Component
-public class TodoBusinessService {
+## Typical Code
 
-  @Autowired
-  TodoDataService dataService;
+```java
+public class ComplexBusinessService {
+
+    SortAlgorithm sortAlgorithm = new BubbleSortAlgorithm();
+```
+
+```java
+public class BubbleSortAlgorithm implements SortAlgorithm {
+```
+
+---
+## What if you want to use a different sorting algorithm?
+---
+## Remove Tight Coupling
+```java
+public class ComplexBusinessService {
+
+  SortAlgorithm sortAlgorithm;//= new BubbleSortAlgorithm();
+
+  public ComplexBusinessService(SortAlgorithm sortAlgorithm) {
+      this.sortAlgorithm = sortAlgorithm;
+  }
+```
+```java
+public class BubbleSortAlgorithm implements SortAlgorithm {
 ```
 ---
-## Dependencies
+## We can write this code!
+
+```java
+SortAlgorithm sortAlgorithm = new BubbleSortAlgorithm();
+ComplexBusinessService businessService = 
+				new ComplexBusinessService(sortAlgorithm);
+```
+---
+# Who does this?
+---
+# Spring Framework
+---
+## There's a Small Problem
+- How does Spring know to create an instance of BubbleSortAlgorithm?
+- How does Spring know to create an instance of ComplexBusinessService and populate instance of BubbleSortAlgorithm?
+---
+## @Component
+```java
+@Component
+public class ComplexBusinessService {
+
+  SortAlgorithm sortAlgorithm;
+```
+
+```java
+@Component
+public class BubbleSortAlgorithm implements SortAlgorithm {
+```
+---
+## @Autowired
+```java
+@Component
+public class ComplexBusinessService {
+
+  @Autowired
+  SortAlgorithm sortAlgorithm;
+```
+
+```java
+@Component
+public class BubbleSortAlgorithm implements SortAlgorithm {
+```
+---
+## Terminology
+- Beans
+- Autowiring
+- Dependency Injection
+- Inversion Of Control
+- IOC Container
+- Application Context
+---
+## @Autowired
 ```java
 @Component
 public class TodoDataService {
