@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Microservices - in28Minutes</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="css/reveal-override.css"/>
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+
+                <!-- Slides are separated by three dashes (quick 'n dirty regular expression) -->
+                <section data-markdown data-separator="---">
+                    <script type="text/template">
+# Microservices
+---
+# Ranga Rao Karanam
+- Top Instructor on Udemy
+- Author of "Mastering Spring 5.0"
+---
+# in28Minutes
+- Create more great programmers
+- Help you make the right career choices
+---
+![](images/Microservices-meme-3.jpg)
+---
+![](images/Microservices-meme-1.jpeg)
+---
+![](images/Microservices-meme-2.jpg)
+---
+# We love Buzzwords
+---
+# Microservices is the latest one!
+---
+# Microservices vs Monolith
+- What are you doing today?
+---
+# Monolith
+---
+# Large
+- Application Size
+- Release Cycles
+- Teams
+---
+# Scalability Challenges
+---
+# New Technology Adoption
+---
+# Agile?
+---
+# Automation Testing?
+---
+# Adapting to Modern Development Practices?
+---
+# Adapting to Device Explosion?
+---
+# Solution? 
+---
+# Microservices
+---
+> Small autonomous services that work together - Sam Newman
+---
+> Developing a single application as a suite of small services each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API....contd
+---
+> These services are built around business capabilities and independently deployable by fully automated deployment machinery...contd
+---
+> There is a bare minimum of centralized management of these services, which may be written in different programming languages and use different data storage technologies - James Lewis and Martin Fowler
+---
+## Microservices
+- REST
+- &amp; Small Well Chosen Deployable Units
+- &amp; Cloud Enabled
+---
+# How does it look?
+---
+### Monolith
+![](images/MonolithApplication.png)
+---
+![](images/MicroservicesArchitectureSplit.png)
+---
+![](images/Microservices-Chain-Example.png)
+---
+## Advantages?
+---
+## New Technology &amp; Process Adaption
+---
+## Faster Release Cycles
+---
+## Scaling
+![](images/Microservices-Multiple-Instances.png)
+---
+# Let's get to Challenges!
+---
+# Quick Setup needed
+---
+# Automation
+---
+# Visibility
+---
+# Bounded Context
+---
+# Configuration Management
+---
+# Dynamic Scale Up and Scale Down
+---
+# Pack of Cards
+---
+# Debugging
+---
+# Consistency
+---
+# Solutions
+---
+# Spring Boot
+---
+> Enable building production ready applications quickly
+---
+### Provide non-functional features 
+  - embedded servers
+  - metrics
+  - health checks
+  - externalized configuration
+---
+# DEMO
+---
+# Spring vs Spring MVC vs Spring Boot
+---
+# Key Features
+---
+# Auto Configuration
+---
+# Starter Projects
+---
+# Spring Cloud
+---
+## Dynamic Scale Up and Down
+- Naming Server (Eureka)
+- Ribbon (Client Side Load Balancing)
+- Feign (Easier REST Clients)
+---
+## Visibility and Monitoring
+- Zipkin Distributed Tracing
+- Netflix API Gateway
+---
+## Configuration Management
+- Spring Cloud Config Server
+---
+## Fault Tolerance
+- Hystrix
+---
+![](images/MicroserviceCommunication.png)
+> Microservices
+---
+## Currency Exchange Service
+```
+http://localhost:8000/currency-exchange/from/EUR/to/INR
+```
+```
+{
+   id: 10002,
+   from: "EUR",
+   to: "INR",
+   conversionMultiple: 75,
+   port: 8000
+}
+```
+---
+## Currency Conversion Service
+```
+http://localhost:8100/currency-converter/from/USD/to/INR/quantity/10
+```
+```
+{
+   id: 10001,
+   from: "USD",
+   to: "INR",
+   conversionMultiple: 65,
+   quantity: 10,
+   totalCalculatedAmount: 650,
+   port: 8000
+}
+```	
+---
+![](images/CurrencyConversionMicroserviceDeployment.png)
+> Currency Conversion Service
+---
+![](images/CurrencyExchangeMicroserviceDeployment.png)
+> Currency Exchange Service
+---
+# How to provide Location Transparency?
+---
+![](images/EurekaNamingServer.png)
+> Eureka Naming Server
+---
+# How to provide Dynamic Load Balancing?
+---
+![](images/RibbonClientSideLoadBalancing.png)
+> Ribbon Load Balancing
+
+```
+http://localhost:8100/currency-converter-feign/from/EUR/to/INR/quantity/10000
+```
+---
+![](images/ZipkinDistributedTracingServer.png)
+> Zipkin Distributed Tracing
+---
+## API Gateways
+- Authentication, authorization and security
+- Rate Limits
+- Fault Tolerance
+- Service Aggregation
+---
+![](images/Microservices-Environments.png)
+> Microservices Environments and Configuration
+---
+### Limits Service
+
+```java
+@Component
+@ConfigurationProperties("limits-service")
+public class Configuration {
+	
+	private int minimum;
+	private int maximum;
+```
+
+```
+@GetMapping("/limits")
+public LimitConfiguration retrieveLimitsFromConfigurations() {
+	return new LimitConfiguration(configuration.getMaximum(), 
+			configuration.getMinimum());
+}
+```
+---
+![](images/SpringCloudConfigServer.png)
+> Spring Cloud Config Server
+---
+- Server Dependency - spring-cloud-config-server
+- Client Dependencies - spring-cloud-starter-config
+
+> Limits Service <--> Spring Config Server
+
+---
+
+bootstrap.properties
+```
+spring.application.name=limits-service
+spring.cloud.config.uri=http://localhost:8888
+spring.profiles.active=qa
+```
+> Limits Service <--> Spring Config Server
+
+---
+```java
+@SpringBootApplication
+@EnableHystrix
+public class LimitsServiceApplication {
+```
+
+```java
+@GetMapping("/fault-tolerance-example")
+@HystrixCommand(fallbackMethod="fallbackRetrieveConfiguration")
+public LimitConfiguration retrieveConfiguration() {
+	throw new RuntimeException("Not available");
+}
+
+public LimitConfiguration fallbackRetrieveConfiguration() {
+	return new LimitConfiguration(999, 9);
+}
+```
+> Fault Tolerance with Hystrix
+---
+# Questions
+---
+                    </script>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
