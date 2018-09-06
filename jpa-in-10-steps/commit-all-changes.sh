@@ -1,1 +1,1 @@
-git add *; git commit -m "I'm too lazy to put in a comment"; git push;
+git add *; git commit -m "Thank You for Choosing to Learn from in28Minutes"; git push;
