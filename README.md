@@ -270,15 +270,6 @@ spring.datasource.password=YOUR_PASSWORD
 
 ### in28Minutes Courses
 
-[![Image](https://github.com/in28minutes/getting-started-in-5-steps/blob/master/course-promotional-images/Eclipse-Tutorial-For-Beginners.png "Eclipse Tutorial For Beginners")](https://www.udemy.com/eclipse-java-tutorial-for-beginners/){:target="_blank"}
-
-
-[![Image](https://github.com/in28minutes/getting-started-in-5-steps/blob/master/course-promotional-images/Eclipse-Tutorial-For-Beginners.png "Eclipse Tutorial For Beginners")](https://www.udemy.com/eclipse-java-tutorial-for-beginners/){:target="_blank"}
-
-
-[![Image](https://github.com/in28minutes/getting-started-in-5-steps/blob/master/Your-First-Steps-From-Programmer-To-Software-Architect.png "Your First Steps from Programmer to Software Architect")](https://www.udemy.com/software-architect-course-first-steps/?couponCode=BRIDGET-PACKT){:target="_blank"}
-
-
 [![Image](https://github.com/in28minutes/getting-started-in-5-steps/blob/master/Your-First-Steps-From-Programmer-To-Software-Architect.png "Your First Steps from Programmer to Software Architect")](https://www.udemy.com/software-architect-course-first-steps/?couponCode=SBT-2019){:target="_blank"}
 "[![Image](https://github.com/in28minutes/getting-started-in-5-steps/blob/master/Learn-Automation-Testing-with-Java-and-Selenium-Webdriver.png ""Learn Automation Testing with Java and Selenium Webdriver
 "")](https://www.udemy.com/automation-testing-with-selenium-and-java-for-beginners/?couponCode=SBT-2019){:target=""_blank""}"
