@@ -274,8 +274,8 @@ spring.datasource.password=YOUR_PASSWORD
 
 
 [![Image](https://github.com/in28minutes/getting-started-in-5-steps/blob/master/course-promotional-images/Your-First-Steps-From-Programmer-To-Software-Architect.png "Your First Steps from Programmer to Software Architect")](https://www.udemy.com/software-architect-course-first-steps/?couponCode=SBT-2019){:target="_blank"}
-"[![Image](https://github.com/in28minutes/getting-started-in-5-steps/blob/master/course-promotional-images/Learn-Automation-Testing-with-Java-and-Selenium-Webdriver.png ""Learn Automation Testing with Java and Selenium Webdriver
-"")](https://www.udemy.com/automation-testing-with-selenium-and-java-for-beginners/?couponCode=SBT-2019){:target=""_blank""}"
+[![Image](https://github.com/in28minutes/getting-started-in-5-steps/blob/master/course-promotional-images/Learn-Automation-Testing-with-Java-and-Selenium-Webdriver.png "Learn Automation Testing with Java and Selenium Webdriver
+")](https://www.udemy.com/automation-testing-with-selenium-and-java-for-beginners/?couponCode=SBT-2019){:target="_blank"}
 [![Image](https://github.com/in28minutes/getting-started-in-5-steps/blob/master/course-promotional-images/Python-Programming-For-Java-Programmers-in-100-Easy-Steps.png "Python For Beginners - Java to Python in 100 Steps")](https://www.udemy.com/learn-python-programming-for-java-programmers?couponCode=SBT-2019){:target="_blank"}
 [![Image](https://github.com/in28minutes/getting-started-in-5-steps/blob/master/course-promotional-images/Learn-Programming-with-Python.png "Learn Programming with Python in 100 Steps")](https://www.udemy.com/python-tutorial-for-beginners/?couponCode=SBT-2019){:target="_blank"}
 [![Image](https://github.com/in28minutes/getting-started-in-5-steps/blob/master/course-promotional-images/Master-Java-Unit-Testing-with-Spring-Boot-Mockito.png "Master Java Unit Testing with Spring Boot & Mockito")](https://www.udemy.com/learn-unit-testing-with-spring-boot/?couponCode=SBT-2019){:target="_blank"}
