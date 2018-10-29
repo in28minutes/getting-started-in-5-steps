@@ -273,4 +273,4 @@ spring.datasource.password=YOUR_PASSWORD
 [![Image](https://github.com/in28minutes/getting-started-in-5-steps/blob/master/course-promotional-images/Eclipse-Tutorial-For-Beginners.png "Eclipse Tutorial For Beginners")](https://www.udemy.com/eclipse-java-tutorial-for-beginners/){:target="_blank"}
 
 
-<a target="_blank" href="https://www.udemy.com/eclipse-java-tutorial-for-beginners/"><img src="https://github.com/in28minutes/getting-started-in-5-steps/raw/master/course-promotional-images/Eclipse-Tutorial-For-Beginners.png" alt="Image" title="Eclipse Tutorial For Beginners"></a>
+
