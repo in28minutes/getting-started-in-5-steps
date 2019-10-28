@@ -3,7 +3,7 @@ body {
 }
 
 body:after {
-content: url(../images/rangaraokaranam-4.png);
+/*content: url(../images/rangaraokaranam-4.png);*/
 position: fixed;
 top: 1em;
 right: 1em;
