@@ -6,13 +6,13 @@ We've released a new course to help you become a Full Stack Developer with React
 
 In this course, You will learn the Basics of Full Stack Development developing a Basic Todo Management Application using React, Spring Boot and Spring Security Frameworks.
 
-https://www.udemy.com/course/full-stack-application-with-spring-boot-and-react/?couponCode=OCTOBER-2019
+https://www.udemy.com/course/full-stack-application-with-spring-boot-and-react/?couponCode=NOVEMBER-2019
 
 For existing in28Minutes Learners, we are creating a special offer for just $10.99. 
 
 As always, you receive a full 30-day, unconditional money back guarantee because I know you are going to love our courses!
 
-https://www.udemy.com/course/full-stack-application-with-spring-boot-and-react/?couponCode=OCTOBER-2019
+https://www.udemy.com/course/full-stack-application-with-spring-boot-and-react/?couponCode=NOVEMBER-2019
 
 ******* What You Can Expect from Every in28Minutes Course *******
 
@@ -30,7 +30,7 @@ Each of these courses come with
 
 ✔ Free Udemy Certificate of Completion on Completion of Course
 
-✔ 30 Day "No Questions Asked" Money Back Guarantee!
+
 
 
 
@@ -48,7 +48,7 @@ Each of these courses come with
 
 ★★★★★ Amazing course. Explained super difficult concepts (that I have spent hours on the internet finding a good explanation) in under 5 minutes.
 
-Zero risk. 30 day money-back guarantee with every purchase of the course. You have nothing to lose!
+
 
 Start Learning Now. Hit the Enroll Button!
 
