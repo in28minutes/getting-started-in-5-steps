@@ -268,7 +268,7 @@ spring.datasource.password=YOUR_PASSWORD
 ### Trouble Shooting
 - https://dev.mysql.com/doc/refman/en/problems.html
 
-## Keep Learning Every Day**
+## Keep Learning Every Day
 - **1:** [FOLLOW](https://links.in28minutes.com/lin) Ranga on LinkedIn
 
 ## Check Out Our Amazing ROADMAPS
