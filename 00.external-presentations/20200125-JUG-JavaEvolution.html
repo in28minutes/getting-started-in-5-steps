@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Java Evolution</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/reveal-override.css"/>
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+
+                <!-- Slides are separated by three dashes (quick 'n dirty regular expression) -->
+                <section data-markdown data-separator="---">
+                    <script type="text/template">
+# Java Evolution
+> Web > API > Full Stack > Microservices > Cloud
+Note:
+GraphQL
+embedded servers
+Reactive - Vertx Akka
+Mobile Applications
+---
+# Ranga Rao Karanam
+- Instructor on Udemy 
+- Author of "Mastering Spring 5"
+- @in28minutes
+- ranga@in28minutes.com
+Note:
+- Tweet Questions
+---
+![](images/ranga-hiking.jpeg)
+---
+## Udemy
+![](images/udemy-reach.png)
+Note:
+- Impact Learners around the world
+---
+# Let's start the Journey
+---
+# Web Applications
+---
+![](images/JavaEE_Model1_Architecture.png)
+> Model 1 Architecture
+Note:
+- JSP Servlet, Request, Response, HttpRequest, HttpResponse, Filters
+- Complex JSPs 
+- Unmaintainable
+---
+![](images/JavaEE_Model2_Architecture.png)
+> Model 2 Architecture
+---
+![](images/JavaEE_Model2_Architecture_Front_Controller.png)
+> Model 2 Modified Architecture
+---
+# Designing Web Apps
+Note:
+- HTML, CSS, Bootstrap, JavaScript and JQuery<!-- .element: class="fragment" -->
+- Security - Login/Logout<!-- .element: class="fragment" -->
+- Session Management<!-- .element: class="fragment" -->
+---
+## Struts
+---
+## Spring Framework
+Note:
+- Why? 
+  - Loose Coupling - Layers > EJB - To Test, Deploy complete App
+  - Modularity
+  - Simplicity - EJB - Transaction Management
+---
+![](images/SpringModules.png)
+> Modularized
+Note:
+- Concepts
+  - DI, IOC, Autowire, Application Context, Bean Factory
+  - Annotations - Component Scan
+  - DI Variations - Constructor Injection vs Setter vs Field
+  - CDI (Contexts and Dependency Injection)
+  - AOP - Cross Cutting Concerns
+---
+## Talking to Databases
+---
+```
+	Connection conn = null;
+	Statement stmt = null;
+	try {
+		// CODE
+		while (rs.next()) {
+			// CODE
+		}
+		rs.close();
+		stmt.close();
+		conn.close();
+	} catch (SQLException se) {
+		se.printStackTrace();
+	} catch (Exception e) {
+		e.printStackTrace();
+	} finally {
+		try {
+			if (stmt != null) {
+				stmt.close();
+			}
+		} catch (SQLException se2) {
+		}
+		try {
+			if (conn != null) {
+				conn.close();
+			}
+		} catch (SQLException se) {
+			se.printStackTrace();
+		}
+	}
+```	
+>JDBC
+---
+```
+class PersonRowMapper implements RowMapper<Person>{
+	@Override
+	public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
+		Person person = new Person();
+		person.setId(rs.getInt("id"));
+		person.setBirthDate(rs.getTimestamp("birth_date"));
+		//Other code
+		return person;
+	}
+	
+}
+
+public List<Person> findAll() {
+	return jdbcTemplate.query("select * from person", new PersonRowMapper());
+}
+```
+>Spring JDBC
+---
+```
+@Mapper
+public interface TodoMybatisService
+		extends TodoDataService {
+
+	@Override
+	@Update("Update todo set user=#{user}, desc=#{desc}, target_date=#{targetDate}, is_done=#{isDone} where id=#{id}")
+	public void updateTodo(Todo todo) throws SQLException;
+
+	@Override
+	@Select("SELECT * FROM TODO WHERE id = #{id}")
+	public Todo retrieveTodo(int id) throws SQLException;
+}
+```
+> iBatis
+---
+![](images/JPA_02_Architecture.png)
+> JPA
+
+Note:
+- Entities and Relationships 
+- OnetoOne(StudentPassport), OnetoMany(CourseReviews),ManyToMany(StudentsCourses)
+- Inheritance Hierarchies (TablePerClass, Joined, MappedSuperClass)
+- FullTimeEmployee vs PartTimeEmployee
+- Transactions
+- JPQL/ Criteria Queries (Write Java Code to Define Query)
+- Caching - First Level and Second Level (with EhCache)
+- Performance Tuning
+---
+![](images/JavaEETypicalArchitecture.png)
+> Typical Java EE Architecture
+---
+![](images/Web_Services_Web_Application_To_Manage_Todos.png)
+Note:
+Why? Problem with Web Applications 
+- Browser <=> Web Application : Request, Response
+- How to reuse logic across web applications?
+- Possible to reuse logic using JARs but JARs are not cross platform.
+
+---
+![](images/Web_Service_Browser_Server__Interaction.png)
+>  
+---
+# What if another application wants to consume your data?
+Note:
+You can build Jars but what if the other app is Python?
+---
+![](images/Web_Service_Multiple_Application_Interaction.png)
+> 
+---
+# Web Services
+Note:
+Basics
+- Machine to Machine Interaction - Can be used by Web Application, Full Stack Applications etc
+- Interoperable - Not Platform or Language Dependent
+- Involve Communication over a Network
+---
+![](images/Web_Service_Z_PlatformIndependence.png)
+> 
+---
+## Web Services Challenges
+Note:
+Deciding
+- Protocol - HTTP or MQ
+- Format - XML, JSON etc
+- Deciding and Communicating Service Definitions
+---
+![](images/Web_Service_Service_Definition.png)
+> 
+---
+## Web Service Categories
+---
+## SOAP
+Note:
+- SOA Architecture - ESB
+- Strict Contracts - WSDL - SOAP Header, Body, Faults
+- Lot of Ceremony
+- WS Security
+---
+![](images/SOAPWebServiceClientAndServiceProvider.png)
+---
+![](images/Web_Services_WSDL_HighLevel.png)
+---
+![](images/Web_Services_WSDL_LowLevel.png)
+---
+![](images/Web_Service_SOAP-Envelope.svg.png)
+---
+![](images/Web_Services_WSDL_SOAP_Envelope.png)
+---
+![](images/soapoverhttp.png)
+> SOAP over HTTP
+---
+![](images/soapovermq.png)
+> SOAP over MQ
+---
+## SOAP Frameworks
+Note:
+- Frameworks - Spring WS, JAX WS, AXIS Framework, CXF
+---
+## REST API
+---
+![](images/REST_Block_Structure.png)
+> REST
+Note:
+- Make best use of HTTP
+- HTTP ++ - Request Methods - Proper Response Status - GET (200,404), PUT, POST(201 CREATED), DELETE
+- Mostly JSON
+---
+### Features
+- HATEOAS<!-- .element: class="fragment" -->
+- Documentation - Open API<!-- .element: class="fragment" -->
+- Security - JWT<!-- .element: class="fragment" -->
+- Versioning - URLs, Content Negotiation or Header<!-- .element: class="fragment" -->
+---
+### Best Practices
+- Consumer First<!-- .element: class="fragment" -->
+- Richardson Maturity Model<!-- .element: class="fragment" -->
+- Enterprise Standardization<!-- .element: class="fragment" -->
+Note:
+- Level 0 - Use HTTP as Transport - SOAP Style Services - /delete etc
+- Level 1 - Use Resources - courses/1 , courses/1/students/12
+- Level 2 - Use HTTP Verbs - GET (200,404), PUT, POST(201 CREATED), DELETE
+- Level 3 - HATEOAS
+---
+### REST Frameworks
+
+Note:
+- Spring REST/MVC
+- JAX RS - Jersey
+- Modern Frameworks (Quarkus/Micronaut)
+
+---
+# Full Stack
+Note:
+JavaScript - Bad History
+What? Why?
+- DOM
+- ES6
+- TypeScript
+- Mobile, IOT, Frontend > REST API > Db
+---
+![](images/angular_00_architecture_future.png)
+> Full Stack with Angular/React/VueJS
+NOTE:
+- Angular, React, Vue > Spring Boot, JAX RS, JPA, Spring Data > MySQL, MongoDb
+
+---
+### Angular 
+Note: 
+JQuery - Made DOM Manipulation easy
+Angular is one of first popular frameworks to avoid DOM Manipulation
+(TypeScript)
+---
+![](images/angular_01_application_module_component.png)
+> Separation of Concerns
+---
+![](images/angular_02_application_todo_overview.png)
+> Modularity
+---
+![](images/angular_03_component.png)
+> Separation of Concerns
+---
+![](images/angular_00_angular_cli_features.png)
+> Automation with Angular CLI
+---
+![](images/angular_06_data_binding.png)
+> Data Binding
+---
+![](images/angular_07_data_binding_2_way.png)
+> 2 Way Data Binding
+---
+### React 
+Note:
+(ES6/TypeScript)
+---
+![](images/react_03_component.png)
+> Reusable Components
+---
+![](images/react_04_virtual_dom.png)
+> High Performance
+---
+![](images/react_02_application_todo_overview.png)
+> 
+---
+### Comparison
+Note:
+- Fully Builtin Features (Angular) vs Choice of Frameworks (React)
+- Performance - React 
+  - Virtual DOM
+- Trends - React
+- Alternatives - VueJS
+
+---
+![](images/MonolithApplication.png)
+> Monolith
+Note:
+Monolith : App - Database
+- Million lines of code
+- 3-6 month release cycles
+- Outdated Technology!
+---
+# Microservices
+Note:
+New Jargon!
+---
+![](images/MicroservicesArchitectureSplit.png)
+> Microservices = REST + Micro + Independently Deployable
+Note:
+Advantages
+- Time to Market
+- New Technology Adoptions
+- Easier Scaling
+- Cloud Adoption - Flexibility in moving to cloud easily (smaller apps - less dependencies)
+---
+### Challenges
+![](images/Microservices-Chain-Example.png)
+Note:
+Challenges
+- Need for building apps quickly
+---
+![](images/Microservices-Multiple-Instances.png)
+> Microservices Deployment Scenario
+Note:
+- Lots of infrastructure support needed
+  - Service Registry
+  - Load Balancing
+  - Centralized Configuration
+  - API Gateway
+  - Monitoring and Distributed Tracing
+---
+![](images/microservices-eureka-naming-server.png)
+> Service Registry
+---
+![](images/microservices-ccs-load-balancing.png)
+> Load Balancing
+---
+![](images/microservices-cloud-config-server.png)
+> Centralized Configuration
+---
+![](images/ZipkinDistributedTracingServer.png)
+> Distributed Tracing
+---
+![](images/microservices-architecture.png)
+> Microservices Overall Architecture
+---
+![](images/event-driven-architectures.png)
+> Event Driven Architectures
+---
+## Microservice Frameworks
+---
+### Spring Boot
+Note:
+- Why?
+  - 1000s Config LOC - Simple web app or rest api
+  - 15 days to setup and another 15 days for NFRs
+---
+#### Auto Configuration
+---
+#### Non Functional Features
+Note:
+- Profiles - Application Configuration in diff Environments
+- Simplified Deployment - Embedded Servers
+- Faster Development - Developer Tools
+- Monitoring - Spring Boot Actuator
+---
+#### Faster Integration of Frameworks 
+Note:
+Spring Boot Starter Projects - web, web services, test, aop, security, data jpa, data rest
+---
+#### Alternatives
+Note:
+-  JAX RS, Play , Quarkus, Micronaut
+---
+### Spring Cloud
+Note:
+- Java Specific
+- Spring Cloud (Config Server, Eureka, Consul, Sleuth, Zuul, Spring Cloud Gateway, Ribbon, Feign)
+---
+### Unit Testing
+
+Note:
+- JUnit, Mockito, Spring Unit Test (Spring Boot Starter Test)
+---
+## Docker
+---
+![](images/Docker-DevOps-02.png)
+Note:
+- Evolution of microservices > Automation of Deployment > Standard Packaging
+
+---
+![](images/docker-traditional-deployment.png)
+> Traditional Deployment
+Note:
+Manual Instructions
+---
+![](images/docker-virtual-machine-deployment.png)
+> Virtual Machines
+---
+![](images/docker-zz-deployment.png)
+> Docker
+---
+![](images/docker-architecture.png)
+> Docker Architecture
+Note:
+- Build images for different apps
+    - Docker File 
+    - Maven Plugins -Spotify, JIB
+- Use Pre Built Docker Images
+  - MySQL, Zipkin, RabbitMQ
+- Best Practices
+  - Layering of Images, Multi Stage Builds
+---
+
+## Container Orchestration
+Note:
+- 1000's of instances of 100's of microservices - High Availability, Self Healing, Zero Downtime Deployments
+---
+![](images/container-orchestrators-high-level.png)
+Note:
+- Complexity of Microservices - Service Discovery, Load Balancing
+- Docker Compose, Docker Swarm, Kubernetes
+---
+## Kubernetes
+---
+![](images/kubernetes-01-intro.png)
+> Kubernetes
+Note:
+Features
+- Declarative
+- Cloud Neutral - GKE, Azure AKS, AWS EKS
+---
+![](images/kubernetes-02-architecture-cluster.png)
+> Kubernetes Cluster
+---
+![](images/kubernetes-03-architecture-master-node.png)
+> Master Node
+---
+![](images/kubernetes-04-architecture-worker-node.png)
+> Worker Node
+---
+![](images/kubernetes-05-architecture-node-pod-containers.png)
+> Pods
+Note:
+- Pod is the basic building block
+- Can have multiple containers
+---
+![](images/kubernetes-07-deployment-replicaset-pod.png)
+> Deployment and Replica Set
+Note:
+- Replica Set is tied to a release. Ensures that a specific number of replicas are always running. Even if you kill one of the instances of the pod, replicaset would observe that and it would bring up a new instance of the pod. In practice, you would see that a replicaset is always tied with a specific release version.
+- Deployment ensures Zero Downtime
+---
+![](images/kubernetes-08-service-intro.png)
+> Service
+Note:
+Pods go and comeback!. Service allows your application to receive traffic through a permanent lifetime address. 
+Service implementations - Load Balancers in different clouds
+---
+#### Service Mesh 
+Note:
+Istio - Canary Deployments, Observability(Kiali), Metrics and Visualization(Graphana, Prometheus), Distributed Tracing (Jaeger)
+---
+#### Helm 
+Note:
+- Simplify Configuration for Microservices
+---
+# Cloud
+
+Note:
+
+Why?
+- On Demand Resource Provisioning
+- Avoid "Undifferentiated Heavy Lifting"
+- Improved Latency and Availability
+Popular - AWS, GCP and Azure
+---
+## IAAS
+![](images/cloud-0-IAAS.png)
+Note:
+- Virtual Servers for Compute - EC2 (Elastic Compute Cloud), Azure Virtual Machines or Google Compute Engines
+- Also called Lift and Shift
+---
+## PAAS
+![](images/cloud-2-PAAS.png)
+Note:
+- Cloud Platform Responsibility - Platform Upgrades, Runtime Upgrades and OS Upgrades
+- Managed Services - Databases, AWS RDS, Azure DB for MySQL
+- Application PAAS - AWS Elastic Beanstalk, Google App Engine, Azure Web Apps
+- Features - Multiple Environments, Multiple Platforms and Language Support, Container and Multi Container Support, Deployment Strategies - Blue Green Deployment, Auto Scaling, Load Balancing, CI/CD (AWS Code Pipeline, AWS Code Build, Azure DevOps, Google Cloud Build)
+
+---
+## Container Orchestration Solutions
+Note:
+- Cloud Specific Container Orchestration  - AWS Fargate or ECS (Elastic Container Service), Azure Container Service (On the way out!)
+- Cloud Neutral Container Orchestration - Kubernetes - GKE, AKS, EKS
+---
+## PCF
+
+Note:
+- Intermediate Platform - PCF
+- For Java Spring Boot, PCF is the easiest one to get started with and it supports microservice features as well! 
+- Code > Build Pack > Droplet > Environment
+- Concepts - Droplets, Build Packs
+
+---
+![](images/pcf-high-level-architecture.png)
+> PCF
+---
+### PCF
+> Here is my source code - run it on the cloud for me!
+
+Note:
+- If you are Java Shop - Microservices - Spring Cloud Services - Service Registry, Config Server and Hystrix
+
+---
+# Serverless
+Note:
+AWS Lambda, Azure Functions, Google Cloud Functions
+- Don't worry about infrastructure
+- Stateless
+- Pay for use - Only for used cycles
+---
+## IAAS
+![](images/cloud-0-IAAS.png)
+
+---
+## Containers
+![](images/cloud-1-CAAS-Containers.png)
+---
+## PAAS
+![](images/cloud-2-PAAS.png)
+---
+## FAAS (or) Serverless
+![](images/cloud-3-FAAS-Serverless.png)
+---
+# Serverless Containers
+Note:
+Google Cloud Run
+---
+# DevOps
+---
+## Continuous Delivery
+![](images/Continuous-Integration-And-Delivery.png)
+Note:
+Ansible
+Terraform
+---
+# What's the best way to Learn?
+- Programming<!-- .element: class="fragment" -->
+- Design, Architecture or New Approach<!-- .element: class="fragment" -->
+- Tool or Framework<!-- .element: class="fragment" -->
+---
+# What should a Java Developer Do?
+- This is the MOST EXCITING TIME ever!<!-- .element: class="fragment" -->
+- Get the right skills - Full Stack, Microservices, Cloud and Big Data<!-- .element: class="fragment" -->
+- Learn Python and JavaScript<!-- .element: class="fragment" -->
+- Dont get distracted by buzzwords<!-- .element: class="fragment" -->
+
+Note:
+- No 1 : Cloud
+- No 2 : New Career Options for Excellent Programmers
+- No 3 : ONLINE LEARNING Revolution
+---
+# Why?
+> Web > API > Full Stack > Microservices > Cloud
+Note:
+- Understand Big Picture - What do I learn? - Decide what to do next?
+- Increase in Speed of Evolution
+	- Continuous Learning
+- Job Losses
+---
+# Questions
+                    </script>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
