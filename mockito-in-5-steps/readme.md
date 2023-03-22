@@ -1,6 +1,6 @@
 ## First 5 Steps in Mockito
 
-Mockito is the most famous mocking framework in Java.
+Mockito is the most popular Java mocking framework.
 
 - Git Repository - https://github.com/in28minutes/getting-started-in-5-steps
 - Pre-requisites 
